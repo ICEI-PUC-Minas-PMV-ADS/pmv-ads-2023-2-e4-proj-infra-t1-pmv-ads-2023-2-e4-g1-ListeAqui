@@ -99,7 +99,6 @@ A tabela a seguir apresenta os requisitos funcionais do projeto, identificando s
 |RF-013| A aplicação deve conter uma página de “Fale conosco”.   | BAIXA | 
 |RF-014| A aplicação deve apresentar imagens que auxiliem o entendimento do leitor para cada assunto exposto no corpo da página.    | ALTA |
 |RF-015| A aplicação deve apresentar um rodapé com os contatos da página, contendo telefone, Whatsapp, Instagram, e-mail.  | MÉDIA | 
- | 
 
 ### Requisitos não Funcionais
 
@@ -119,21 +118,6 @@ A tabela a seguir apresenta os requisitos não funcionais que o projeto deverá 
 |RNF-010| A aplicação deve ter pontuação acima de 60 no requisito “SEO”, verificado pelo Lighthouse no navegador Google Chrome.  | MÉDIA | 
 |RNF-011| O sistema deverá estar disponível 24 horas por dia e 7 dias na semana. | ALTA |  
 
-Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
-
-- [Requisitos Funcionais
- (RF)](https://pt.wikipedia.org/wiki/Requisito_funcional):
- correspondem a uma funcionalidade que deve estar presente na
-  plataforma (ex: cadastro de usuário).
-- [Requisitos Não Funcionais
-  (RNF)](https://pt.wikipedia.org/wiki/Requisito_n%C3%A3o_funcional):
-  correspondem a uma característica técnica, seja de usabilidade,
-  desempenho, confiabilidade, segurança ou outro (ex: suporte a
-  dispositivos iOS e Android).
-Lembre-se que cada requisito deve corresponder à uma e somente uma
-característica alvo da sua solução. Além disso, certifique-se de que
-todos os aspectos capturados nas Histórias de Usuário foram cobertos.
-
 ## Restrições
 
 As restrições podem ser explicadas como tarefas que limitam e comprometem a execução e o desenvolvimento do projeto, servindo como marco delimitador daquilo que precisará ser realizado para que o projeto seja considerado pronto.  
@@ -149,12 +133,6 @@ As restrições podem ser explicadas como tarefas que limitam e comprometem a ex
 |05| A aplicação deve ser entregue até o mês/ano de 12/2022.|
 |06| O Back end da aplicação deve ser hospedado no smarterasp.net e o front end para web também, já a versão mobile deve estár publicada na play storage da google.      |
 |07| O Banco de dados pode ser apenas do tipo NoSQL.  |
-
-Enumere as restrições à sua solução. Lembre-se de que as restrições geralmente limitam a solução candidata.
-
-> **Links Úteis**:
-> - [O que são Requisitos Funcionais e Requisitos Não Funcionais?](https://codificar.com.br/requisitos-funcionais-nao-funcionais/)
-> - [O que são requisitos funcionais e requisitos não funcionais?](https://analisederequisitos.com.br/requisitos-funcionais-e-requisitos-nao-funcionais-o-que-sao/)
 
 ## Diagrama de Casos de Uso
 
