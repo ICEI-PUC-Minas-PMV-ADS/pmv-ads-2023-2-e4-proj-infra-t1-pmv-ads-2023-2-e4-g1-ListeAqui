@@ -3,15 +3,11 @@
 Texto descritivo com a visão geral do projeto abordado. Inclui o contexto, o problema, os objetivos, a justificativa e o público-alvo do projeto.
 
 ## Problema
-O usuário não possui uma forma para consolidar em lista os itens a serem adquiridos no mercado; e também não sabe como rastrear os valores das últimas compras de um determinado produto do mercado.(DOL,2023)
+O usuário não possui uma forma para consolidar em lista os itens a serem adquiridos no mercado; e também não sabe como rastrear os valores das últimas compras de um determinado produto do mercado.(DOL,2023).
+
 Além disso, o usuário precisa quantificar itens que foram comprados por mês/ano;
 
 Sendo assim, faz-se necessário que o consumidor tenha um produto que o auxilie na organização quantitativa e financeira de suas compras.(R7, 2022)
-
-> **Links Úteis**:
-> - [Objetivos, Problema de pesquisa e Justificativa](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
-> - [Matriz Certezas, Suposições e Dúvidas](https://medium.com/educa%C3%A7%C3%A3o-fora-da-caixa/matriz-certezas-suposi%C3%A7%C3%B5es-e-d%C3%BAvidas-fa2263633655)
-> - [Brainstorming](https://www.euax.com.br/2018/09/brainstorming/)
 
 ## Objetivos
 
