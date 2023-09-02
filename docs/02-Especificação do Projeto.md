@@ -136,12 +136,19 @@ todos os aspectos capturados nas Histórias de Usuário foram cobertos.
 
 ## Restrições
 
-O projeto está restrito pelos itens apresentados na tabela a seguir.
+As restrições podem ser explicadas como tarefas que limitam e comprometem a execução e o desenvolvimento do projeto, servindo como marco delimitador daquilo que precisará ser realizado para que o projeto seja considerado pronto.  
+
+ A tabela abaixo, apresenta as seguintes restrições do projeto. 
 
 |ID| Restrição                                             |
 |--|-------------------------------------------------------|
-|01| O projeto deverá ser entregue até o final do semestre |
-|02| Não pode ser desenvolvido um módulo de backend        |
+|01| A aplicação deve restringir as tecnologias de Front-End com React Native, HTML, CSS, JavaScript e Back-End/API com linguagem de programação C# e framework asp.net core.  |
+|02| A aplicação deve ter a homologação das fases de testes (QA) e operação assistida antes do processo de subida para produção.      |
+|03| A aplicação deve conter a documentação técnica (Solution Design Document) para facilitar a equipe de suporte em futuros ajustes no código.  |
+|04| A aplicação deverá ficar restrito a um único idioma, que será o “pt-br” (português).        |
+|05| A aplicação deve ser entregue até o mês/ano de 12/2022.|
+|06| O Back end da aplicação deve ser hospedado no smarterasp.net e o front end para web também, já a versão mobile deve estár publicada na play storage da google.      |
+|07| o Banco de dados pode ser apenas do tipo NoSQL.  |
 
 Enumere as restrições à sua solução. Lembre-se de que as restrições geralmente limitam a solução candidata.
 
