@@ -75,12 +75,31 @@ Obs.: todas as informações para gerar os indicadores devem estar no diagrama d
 
 As tabelas que se seguem apresentam os requisitos funcionais e não funcionais que detalham o escopo do projeto. Para determinar a prioridade de requisitos, aplicar uma técnica de priorização de requisitos e detalhar como a técnica foi aplicada.
 
+
+## Requisitos
+
+A tabela a seguir apresenta os requisitos funcionais do projeto, identificando suas respectivas prioridades de entrega.
+    
 ### Requisitos Funcionais
 
 |ID    | Descrição do Requisito  | Prioridade |
 |------|-----------------------------------------|----|
-|RF-001| Permitir que o usuário cadastre tarefas | ALTA | 
-|RF-002| Emitir um relatório de tarefas no mês   | MÉDIA |
+|RF-001| O aplicativo deve permitir o cadastro de usuários   | ALTA | 
+|RF-002| O aplicativo deve permitir o login de usuários   | ALTA | 
+|RF-003| A aplicação deve conter uma aba após login no qual o usuário poderá cadastrar os itens da lista do mercado  | ALTA |
+|RF-004| A aplicação deve apresentar funcionalidades para que os usuários possam consultar as listas já cadastradas   | ALTA | 
+|RF-005| A aplicação deve apresentar funcionalidades para o usuário cadastrar o preço dos itens  | ALTA |
+|RF-006| A aplicação deve conter uma aba que o usuário pesquise todos os preços já cadastrados no aplicativo para um determinado item   | ALTA |
+|RF-007| A aplicação deve apresentar uma aba que mostre o consumo mensal e anual dos itens da lista  | ALTA | 
+|RF-008| A aplicação deve permitir que dentro da lista, apareçam as opções de (excluir e editar) os itens cadastrados na lista   | ALTA| 
+|RF-009| A aplicação deve colher o aceite do usuário para os termos de Política de Cookies / Privacidade, flutuante com alinhamento vertical inferior, e horizontal ao centro.    |MÉDIA |
+|RF-010| A aplicação deve conter uma página de "Política de Privacidade” contendo informações sobre a privacidade.  | ALTA |  
+|RF-011| A aplicação deve validar o login do usuário | ALTA |
+|RF-012| A aplicação deve ter a possibilidade de redefinir senha.   | ALTA |
+|RF-013| A aplicação deve conter uma página de “Fale conosco”.   | BAIXA | 
+|RF-014| A aplicação deve apresentar imagens que auxiliem o entendimento do leitor para cada assunto exposto no corpo da página.    | ALTA |
+|RF-015| A aplicação deve apresentar um rodapé com os contatos da página, contendo telefone, Whatsapp, Instagram, e-mail.  | MÉDIA | 
+ | 
 
 ### Requisitos não Funcionais
 
