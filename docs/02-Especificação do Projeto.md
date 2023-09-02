@@ -103,10 +103,21 @@ A tabela a seguir apresenta os requisitos funcionais do projeto, identificando s
 
 ### Requisitos não Funcionais
 
+A tabela a seguir apresenta os requisitos não funcionais que o projeto deverá atender, identificando suas prioridades de entrega.
+
 |ID     | Descrição do Requisito  |Prioridade |
 |-------|-------------------------|----|
-|RNF-001| O sistema deve ser responsivo para rodar em um dispositivos móvel | MÉDIA | 
-|RNF-002| Deve processar requisições do usuário em no máximo 3s |  BAIXA | 
+|RNF-001| A aplicação deve ser responsiva, permitindo a visualização em em dispositivos de celular, desktop, notebook e tablet.  |  ALTA | 
+|RNF-002| A aplicação deve ter bom nível de contraste entre os elementos da tela em conformidade.      | MÉDIA | 
+|RNF-003| O desenvolvimento front-end para Mobile deve ser através do framework React Native.  | ALTA | 
+|RNF-004| O desenvolvimento front-end para desktop deve ser através de HTML/CSS/JavaScript  | ALTA | 
+|RNF-005| O sistema back-end juntamente dom a API deve ser desenvolvido na linguagem C#, utilizando o framework - Asp.net Core. |ALTA |
+|RNF-006| O banco de dados utilizado será NoSQL.   | MÉDIA | 
+|RNF-007| A aplicação deve ter pontuação acima de 50 no requisito “Desempenho”, verificado pelo Lighthouse no navegador Google Chrome.   | MÉDIA |
+|RNF-008| A aplicação  deve ter pontuação acima de 50 no requisito “Práticas Recomendadas”, verificado pelo Lighthouse no navegador Google Chrome.   | BAIXA | 
+|RNF-009| A aplicação deve ter pontuação acima de 70 no requisito “Acessibilidade”, verificado pelo Lighthouse no navegador Google Chrome.  | MÉDIA |
+|RNF-010| A aplicação deve ter pontuação acima de 60 no requisito “SEO”, verificado pelo Lighthouse no navegador Google Chrome.  | MÉDIA | 
+|RNF-011| O sistema deverá estar disponível 24 horas por dia e 7 dias na semana. | ALTA |  
 
 Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
 
