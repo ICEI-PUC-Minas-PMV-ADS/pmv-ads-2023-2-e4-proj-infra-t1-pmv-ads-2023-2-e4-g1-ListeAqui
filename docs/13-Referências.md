@@ -1,7 +1,5 @@
 # Referências
 
-Inclua todas as referências (livros, artigos, sites, etc) utilizados no desenvolvimento do trabalho.
+Elo. Hábitos de Consumo. Disponível em: https://www.elo.com.br/imprensa/elo-habitos-consumo. Acesso em: 3 de setembro de 2023.
 
-> **Links Úteis**:
-> - [Formato ABNT](https://www.normastecnicas.com/abnt/trabalhos-academicos/referencias/)
-> - [Referências Bibliográficas da ABNT](https://comunidade.rockcontent.com/referencia-bibliografica-abnt/)
+Travelex Bank. Por que educação financeira é pauta indispensável para 2023. Disponível em: https://www.travelexbank.com.br/blog/por-que-educacao-financeira-e-pauta-indispensavel-para-2023/. Acesso em: 3 de setembro de 2023.
