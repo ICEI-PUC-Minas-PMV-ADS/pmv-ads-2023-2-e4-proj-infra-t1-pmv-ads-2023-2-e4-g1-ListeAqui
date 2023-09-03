@@ -1,16 +1,16 @@
 # TÍTULO DO PROJETO
 
-`CURSO`
+`CURSO: ANÁLISE E DESENVOLVIMENTO DE SISTEMAS`
 
-`DISCIPLINA`
+`DISCIPLINA: DESENVOLVIMENTO DE APLICAÇÕES DISTRIBUIÍDAS`
 
-`SEMESTRE`
+`4º SEMESTRE`
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+Nosso projeto tem como objetivo oferecer uma solução que possibilite a organização de itens e despesas em compras mensais de supermercado.
 
 ## Integrantes
 
-* Nome completo do aluno 1
+* Jéssica Grimaldi Santa Anna
 * Nome completo do aluno 2
 * Nome completo do aluno 3
 * Nome completo do aluno 4
