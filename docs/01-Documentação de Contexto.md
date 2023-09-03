@@ -1,6 +1,6 @@
 # Introdução
 
-A gestão financeira é uma habilidade essencial em nossas vidas, pois impacta diretamente na capacidade de atigir metas financeiras e manter uma qualidade de vida saudável. Uma ferramenta simples, porém incrivelmente eficaz, para auxiliar nesse processo é a criação de uma lista de compras. 
+A gestão financeira é uma habilidade essencial em nossas vidas, pois impacta diretamente na capacidade de atingir metas financeiras e manter uma qualidade de vida saudável. Uma ferramenta simples, porém incrivelmente eficaz, para auxiliar nesse processo é a criação de uma lista de compras. 
 
 Conforme destacado no blog da instituição financeira Neon em 2022, a lista de compras é uma ferramenta essencial ao visitar supermercados e outros estabelecimentos cotidianos. A sua utilização permite manter os gastos alinhados ao planejado, evitando compras impulsivas e fomentando a prática de uma gestão financeira mais sólida. Ao elaborar previamente uma relação dos itens a serem adquiridos, o consumidor adquire um controle maior sobre o que efetivamente coloca em seu carrinho ou cesto de compras. Isso não apenas resulta em economia financeira, mas também promove um consumo mais consciente e saudável.
 
