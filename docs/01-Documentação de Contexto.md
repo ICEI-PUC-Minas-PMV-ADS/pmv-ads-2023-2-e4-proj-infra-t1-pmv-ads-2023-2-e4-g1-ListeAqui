@@ -20,12 +20,7 @@ Apresente também alguns (pelo menos 2) objetivos específicos dependendo de ond
 
 ## Justificativa
 
-Descreva a importância ou a motivação para trabalhar com esta aplicação que você escolheu. Indique as razões pelas quais você escolheu seus objetivos específicos ou as razões para aprofundar em certos aspectos do software.
-
-O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estatísticos, que podem ser apresentados, com o objetivo de esclarecer detalhes do problema que será abordado pelo grupo.
-
-> **Links Úteis**:
-> - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
+Considerando a necessidade de que poupar dinheiro e consumir de forma consciente ganha ainda mais relevância diante do impacto de intempéries econômicas (TraveleX, 2023) e que os dados apresentados em 2023 pela pesquisa sobre Hábitos de Consumo no Brasil, feita pela Elo, indicam que a alimentação e combustível representam 46% do orçamento doméstico da população de baixa renda (sendo estas compras realizadas de modo presencial em 98% dos casos) nossa solução visa oferecer uma ferramenta que possibilite a organização das compras e maior controle dos gastos mensais realizados em supermercados.
 
 ## Público-Alvo
 
