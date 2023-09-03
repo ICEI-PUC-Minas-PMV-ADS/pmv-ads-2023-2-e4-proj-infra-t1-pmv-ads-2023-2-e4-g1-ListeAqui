@@ -59,8 +59,40 @@ Conceituar qualidade de fato é uma tarefa complexa, mas ela pode ser vista como
 No contexto de desenvolvimento de software, qualidade pode ser entendida como um conjunto de características a serem satisfeitas, de modo que o produto de software atenda às necessidades de seus usuários. Entretanto, tal nível de satisfação nem sempre é alcançado de forma espontânea, devendo ser continuamente construído. Assim, a qualidade do produto depende fortemente do seu respectivo processo de desenvolvimento.
 
 A norma internacional ISO/IEC 25010, que é uma atualização da ISO/IEC 9126, define oito características e 30 subcaracterísticas de qualidade para produtos de software.
-Com base nessas características e nas respectivas sub-características, identifique as sub-características que sua equipe utilizará como base para nortear o desenvolvimento do projeto de software considerando-se alguns aspectos simples de qualidade. Justifique as subcaracterísticas escolhidas pelo time e elenque as métricas que permitirão a equipe avaliar os objetos de interesse.
+Com base nessas características e nas respectivas sub-características, utilizararemos como base para nortear o desenvolvimento do projeto de software as que se seguem abaixo, juntamente com suas respectivas métricas:
 
+### Eficiência de performance:
+
+Comportamento do tempo: tempo de resposta e processamento adequado? Sim e Não
+
+### Compatibilidade:
+
+Coexistência: capacidade de realizar funções eficientemente enquanto compartilha um ambiente ou recursos com outros produtos? Sim e Não
+
+### Usabilidade:
+
+Adequação reconhecível: capacidade de reconhecer se um produto ou sistema é apropriado para suas necessidades? Sim e Não
+Capacidade de aprendizado: facilidade de aprender como utilizar o produto ou sistema? Sim e Não
+Estética da interface de usuário: agradabilidade da interface? Sim e Não
+
+### Confiabilidade
+
+Disponibilidade: se um sistema, produto ou componente está acessível e operante? Sim e Não
+
+### Segurança
+
+Confidencialidade – produto ou sistema é capaz de garantir que dados são acessados apenas por aqueles que têm acesso autorizado? Sim e Não
+Integridade – capacidade de prevenir acesso não-autorizado e modificação de dados ou programas de computador? Sim e Não
+
+### Manutenibilidade
+
+Analisabilidade: capacidade de diagnosticar problemas ou causas de falhas, assim como partes a serem modificadas? Sim e Não
+Modificabilidade: capacidade de um produto ou sistema ser modificado sem introduzir defeitos ou diminuir a qualidade atual? Sim e Não
+Testabilidade: efetividade de testes para o sistema, produto ou componente? Sim e Não
+
+### Portabilidade
+
+Adaptabilidade: capacidade de um produto ou sistema de ser adaptado a um novo hardware, software ou outros ambientes? Sim e Não
 > **Links Úteis**:
 >
 > - [ISO/IEC 25010:2011 - Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — System and software quality models](https://www.iso.org/standard/35733.html/)
