@@ -72,6 +72,7 @@ Coexistência: capacidade de realizar funções eficientemente enquanto comparti
 ### Usabilidade:
 
 Adequação reconhecível: capacidade de reconhecer se um produto ou sistema é apropriado para suas necessidades? Sim e Não
+
 Capacidade de aprendizado: facilidade de aprender como utilizar o produto ou sistema? Sim e Não
 
 Estética da interface de usuário: agradabilidade da interface? Sim e Não
@@ -91,6 +92,7 @@ Integridade – capacidade de prevenir acesso não-autorizado e modificação de
 Analisabilidade: capacidade de diagnosticar problemas ou causas de falhas, assim como partes a serem modificadas? Sim e Não
 
 Modificabilidade: capacidade de um produto ou sistema ser modificado sem introduzir defeitos ou diminuir a qualidade atual? Sim e Não
+
 Testabilidade: efetividade de testes para o sistema, produto ou componente? Sim e Não
 
 ### Portabilidade
