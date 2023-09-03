@@ -24,7 +24,7 @@ Auxiliar o usuário na gestão de suas compras e finanças pessoais, através do
 * Promover o controle dos gastos do usuário.
 * Minimizar compras por impulso.
 * Encorajar um consumo mais consciente e responsável.
-* Contribuir para criação de uma vida financeira mais organizada e equilibrada
+* Contribuir para criação de uma vida financeira mais organizada e equilibrada.
 
 ## Justificativa
 
