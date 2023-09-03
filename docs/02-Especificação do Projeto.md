@@ -33,10 +33,9 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 | Clara Marquez   |  Quero criar listas de compras facilmente.            | Para economizar tempo e garantir que não esqueça nenhum item essencial.|
 | Clara Marquez  |  Preciso adicionar e remover itens da lista. | Para ajustar minha lista conforme necessário, mantendo-a atualizada.|
 | Carlos Vieira   | Quero receber lembretes antes de ir às compras.| Para me lembrar de comprar os itens necessários quando estiver no supermercado.|
-| Carlos Vieira  | Preciso categorizar os itens na lista. | Para organizar minha lista por seções, facilitando a busca no supermercado.|
-          
+| Carlos Vieira  | Preciso categorizar os itens na lista. | Para organizar minha lista por seções, facilitando a busca no supermercado.|          
 | Cleide Santana  | Quero ter a opção de compartilhar minha lista com outras pessoas.  | Para colaborar em listas de compras com minha família ou colegas de casa.|
-| Cleide Santana  |Preciso acessar minha lista de compras de qualquer dispositivo | Para ter flexibilidade e acesso às minhas listas em diferentes lugares.||
+| Cleide Santana  |Preciso acessar minha lista de compras de qualquer dispositivo | Para ter flexibilidade e acesso às minhas listas em diferentes lugares.|
 
 ## Modelagem do Processo de Negócio 
 
