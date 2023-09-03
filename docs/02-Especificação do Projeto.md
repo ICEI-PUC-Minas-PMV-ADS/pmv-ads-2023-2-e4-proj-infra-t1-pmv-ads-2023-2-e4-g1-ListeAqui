@@ -36,7 +36,7 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 | Carlos Vieira  | Preciso categorizar os itens na lista. | Para organizar minha lista por seções, facilitando a busca no supermercado.|
           
 | Cleide Santana  | Quero ter a opção de compartilhar minha lista com outras pessoas.  | Para colaborar em listas de compras com minha família ou colegas de casa.|
-| Cleide Santana  |Preciso acessar minha lista de compras de qualquer dispositivo | Para ter flexibilidade e acesso às minhas listas em diferentes lugares.|
+| Cleide Santana  |Preciso acessar minha lista de compras de qualquer dispositivo | Para ter flexibilidade e acesso às minhas listas em diferentes lugares.||
 
 ## Modelagem do Processo de Negócio 
 
