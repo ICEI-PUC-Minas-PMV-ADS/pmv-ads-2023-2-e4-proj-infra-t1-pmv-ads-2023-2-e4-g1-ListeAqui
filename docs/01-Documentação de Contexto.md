@@ -7,11 +7,8 @@ Conforme destacado no blog da instituição financeira Neon (blog Neon, 2022), a
 Portanto, a finalidade primordial deste aplicativo é auxiliar o usuário na elaboração de um planejamento eficaz para suas compras, através da criação de uma lista de compras de forma digital, bem como na manutenção de um rigoroso controle financeiro.
 
 ## Problema
-O usuário não possui uma forma para consolidar em lista os itens a serem adquiridos no mercado; e também não sabe como rastrear os valores das últimas compras de um determinado produto do mercado.(DOL,2023).
-
-Além disso, o usuário precisa quantificar itens que foram comprados por mês/ano;
-
-Sendo assim, faz-se necessário que o consumidor tenha um produto que o auxilie na organização quantitativa e financeira de suas compras.(R7, 2022)
+O usuário não possui uma forma para consolidar em lista os itens a serem adquiridos no mercado; e também não sabe como rastrear os valores das últimas compras de um determinado produto do mercado(DOL,2023); além disso, o usuário precisa quantificar itens que foram comprados por mês/ano.
+Apartir do que foi esposto, faz-se necessário que o consumidor tenha um produto que o auxilie na organização quantitativa e financeira de suas compras(R7, 2022).
 
 ## Objetivos
 
