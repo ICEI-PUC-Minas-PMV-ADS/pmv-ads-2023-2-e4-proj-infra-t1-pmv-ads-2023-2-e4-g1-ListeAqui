@@ -10,14 +10,16 @@ Nosso projeto tem como objetivo oferecer uma solução que possibilite a organiz
 
 ## Integrantes
 
+* Ana Carolina Silva Mendes
+* Gabriel Nakhata Lopes Ruas Nhimi
 * Jéssica Grimaldi Santa Anna
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
+* João Paulo Faria do Nascimento
+* Rafael Alvarenga Rodrigues
+* Silvia Cristina De Oliveira Teixeira
 
 ## Orientador
 
-* Nome completo do professor 1
+* Felipe Augusto Lara Soares
 
 ## Instruções de utilização
 
