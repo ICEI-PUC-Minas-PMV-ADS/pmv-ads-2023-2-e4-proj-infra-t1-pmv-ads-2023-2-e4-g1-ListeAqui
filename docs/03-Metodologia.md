@@ -61,7 +61,7 @@ Para organização e distribuição das tarefas do projeto, a equipe está utili
 
 O quadro kanban do projeto está disponível no link: [Project > EXE [ LogísticaTec ] < ](https://github.com/orgs/ICEI-PUC-Minas-PMV-ADS/projects/565/views/1) e é apresentado, no estado atual, na figura abaixo:
 
-![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t1-pmv-ads-2023-2-e4-proj1/issues/29#issue-1881011420)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t1-pmv-ads-2023-2-e4-proj1/assets/86859418/25ead49f-ed10-4026-97a6-bcce56cd73cd)
 
 ### Ferramentas
 
