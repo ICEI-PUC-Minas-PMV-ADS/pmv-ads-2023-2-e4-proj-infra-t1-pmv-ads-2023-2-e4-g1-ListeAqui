@@ -27,7 +27,7 @@ As referências abaixo irão auxiliá-lo na geração do artefato “Modelo ER�
 
 O Esquema Relacional corresponde à representação dos dados em tabelas juntamente com as restrições de integridade e chave primária.
  
-![ER](img/ModeloRelacional.png)
+![ER](img/ModeloRelacional.PNG)
 
 ## Modelo Físico
 
