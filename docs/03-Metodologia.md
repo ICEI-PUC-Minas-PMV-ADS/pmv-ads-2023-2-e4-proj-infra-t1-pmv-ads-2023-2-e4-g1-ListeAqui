@@ -59,8 +59,9 @@ Para organização e distribuição das tarefas do projeto, a equipe está utili
 - **In Progress**: As tarefas iniciadas são movidas para está lista.
 - **Done**: As tarefas finalizadas são movidas para está lista.
 
-O quadro kanban do projeto está disponível no link:
+O quadro kanban do projeto está disponível no link: [Project > EXE [ LogísticaTec ] < ](https://github.com/orgs/ICEI-PUC-Minas-PMV-ADS/projects/565/views/1) e é apresentado, no estado atual, na figura abaixo:
 
+![image](https://user-images.githubusercontent.com/82043220/229251260-9a7a6ec4-9896-4cb7-8d04-c4b92b34557c.png)
 
 ### Ferramentas
 
