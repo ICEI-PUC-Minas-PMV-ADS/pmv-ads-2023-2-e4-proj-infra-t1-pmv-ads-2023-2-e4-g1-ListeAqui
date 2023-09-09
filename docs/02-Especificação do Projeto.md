@@ -195,7 +195,7 @@ A equipe cumprirá suas tarefas de acordo com as habilidades e características 
 | Entrega do projeto  |   Todos    |     Pendente                                                  |
 
 
-![Simple Project Timeline](img/02-project-timeline.png)
+
 
 ## Gestão de Orçamento
 
@@ -212,4 +212,5 @@ Com base em todo o escopo produzido anteriormente, os custos do projeto serão g
 |    Total                             |      R$ 364.000,00             | 
 
 
-![Orçamento](img/02-orcamento.png)
+
+
