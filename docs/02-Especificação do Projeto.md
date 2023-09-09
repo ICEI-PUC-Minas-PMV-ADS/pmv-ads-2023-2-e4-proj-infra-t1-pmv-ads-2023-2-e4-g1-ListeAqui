@@ -40,22 +40,23 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 ## Modelagem do Processo de Negócio 
 
 ### Análise da Situação Atual
-
-Apresente aqui os problemas existentes que viabilizam sua proposta. Apresente o modelo do sistema como ele funciona hoje. Caso sua proposta seja inovadora e não existam processos claramente definidos, apresente como as tarefas que o seu sistema pretende implementar são executadas atualmente, mesmo que não se utilize tecnologia computacional. 
+A Lista de Compras é uma tarefa simples e eficaz que auxilia no processo de compras. A situação
+atual consiste em auxiliar o usuário na elaboração de um planejamento eficaz para suas compras, através da criação de uma lista de compras de forma digital, bem como na manutenção de um rigoroso controle financeiro.
 
 ### Descrição Geral da Proposta
 
-Apresente aqui uma descrição da sua proposta abordando seus limites e suas ligações com as estratégias e objetivos do negócio. Apresente aqui as oportunidades de melhorias.
+O usuário não possui uma forma para consolidar em lista os seus itens a serem adquiridos no mercado, e também não sabe como rastrear  os valores das últimas compras de um determinado produto do mercado. O APP benefícia aqueles  que buscam uma ferramenta conveniente para criar listas de compras e manter seus gastos e planejamentos. Em seguida, o usuário computa produtos,compras e gastos através do aplicativo contribuindo para criação de uma vida financeira mais organizada e equilibrada.
 
-### Processo 1 – NOME DO PROCESSO
+### Processo 1 – Cadastro
 
-Apresente aqui o nome e as oportunidades de melhorias para o processo 1. Em seguida, apresente o modelo do processo 1, descrito no padrão BPMN. 
+É necessário que o usuário baixe o APP e faça seu cadastro. Em seguida, o usuário computa produtos e compras.facilidade para adicionar e remover itens da lista. 
 
 ![Processo 1](img/02-bpmn-proc1.png)
 
-### Processo 2 – NOME DO PROCESSO
+### Processo 2 – Controle de Gastos
 
-Apresente aqui o nome e as oportunidades de melhorias para o processo 2. Em seguida, apresente o modelo do processo 2, descrito no padrão BPMN.
+
+É possivel economizar tempo e garantir que não esqueça nenhum item essencial. O APP redige avisos aos usuarios  através de lembretes antes de ir às compras. O usuário também tem a opção de compartilhar a lista com outras pessoas.
 
 ![Processo 2](img/02-bpmn-proc2.png)
 
@@ -160,7 +161,7 @@ A matriz de rastreabilidade é uma ferramenta usada para facilitar a visualizaç
 
 # Gerenciamento de Projeto
 
-De acordo com o PMBoK v6 as dez áreas que constituem os pilares para gerenciar projetos, e que caracterizam a multidisciplinaridade envolvida, são: Integração, Escopo, Cronograma (Tempo), Custos, Qualidade, Recursos, Comunicações, Riscos, Aquisições, Partes Interessadas. Para desenvolver projetos um profissional deve se preocupar em gerenciar todas essas dez áreas. Elas se complementam e se relacionam, de tal forma que não se deve apenas examinar uma área de forma estanque. É preciso considerar, por exemplo, que as áreas de Escopo, Cronograma e Custos estão muito relacionadas. Assim, se eu amplio o escopo de um projeto eu posso afetar seu cronograma e seus custos.
+Utilizando o PMBoK padrão todo o projeto será gerenciado utilizando planilhas integradas que possibilitarão a visualização da evolução dos trabalhos, bem como a possibilidade de melhoria prática a cada implementação. Para tal, todas as informações referentes ao cronograma, previsão de custos, recursos e equipe envolvidas, atividades ocupadas, reuniões, produção de documentos, entre outros, serão devidamente registradas com o objetivo de construir base documental sólida a fim de que o desenvolvimento do projeto transcorra obedecendo padrões e normas de excelência e qualidade.
 
 ## Gerenciamento de Tempo
 
@@ -174,12 +175,41 @@ O gráfico de Gantt ou diagrama de Gantt também é uma ferramenta visual utiliz
 
 ## Gerenciamento de Equipe
 
-O gerenciamento adequado de tarefas contribuirá para que o projeto alcance altos níveis de produtividade. Por isso, é fundamental que ocorra a gestão de tarefas e de pessoas, de modo que os times envolvidos no projeto possam ser facilmente gerenciados. 
+A equipe cumprirá suas tarefas de acordo com as habilidades e características subjetivas de cada membro, a fim de que cada um contribua e produza o melhor trabalho a ser incorporado ao projeto e consequentemente ao produto final. O gerenciamento das tarefas será registrado para que a produtividade e a qualidade sejam mantidas durante todo o desenvolvimento do projeto.
+
+|       TAREFA             |        RESPONSÁVEL                 |             STATUS               |
+|--------------------------|------------------------------------|----------------------------------|
+| Definição de tema   |  Gabriel            | Concluído                                            |
+| Documentação de contexto  | Silvia        | Concluído                                            |
+| Personas / Histórias de usuários  | Jessica | Concluído                                          |
+| Requisitos funcionais | João | Concluído                                                         |          
+| Gerenciamento de tempo / Equipe  | Ana Carolina   | Concluído                                    |
+| Orçamento  | Ana Carolina  | Pendente                                                            |
+| Requisitos não funcionais | João   |  Concluído                                                  |
+| Restrições  | João   |  Concluído                                                                |
+| Diagrama de casos de uso | Rafael |  Concluído                                                   |
+| Arquitetura de solução | Silvia  |  Pendente                                                     |
+| Matriz de rastreabilidade | Rafael |  Concluído                                                  |
+| Github  |   Todos  |     Em andamento                                                            | 
+| Revisão do projeto  |  Todos    |      Pendente                                                  |
+| Entrega do projeto  |   Todos    |     Pendente                                                  |
+
 
 ![Simple Project Timeline](img/02-project-timeline.png)
 
 ## Gestão de Orçamento
 
-O processo de determinar o orçamento do projeto é uma tarefa que depende, além dos produtos (saídas) dos processos anteriores do gerenciamento de custos, também de produtos oferecidos por outros processos de gerenciamento, como o escopo e o tempo.
+Com base em todo o escopo produzido anteriormente, os custos do projeto serão gerenciados  na tabela abaixo:
+
+
+|       RECURSOS NECESSÁRIOS           |        CUSTOS R$               |  
+|--------------------------------------|--------------------------------|
+|    Recursos Humanos                  |      R$ 300.000,00             |
+|    Hardware	                       |      R$ 29.900,00              |
+|    Rede                              |      R$ 3.100,00               |
+|    Software                          |      R$ 26.000,00              |
+|    Serviços                          |      R$ 5.000,00               |
+|    Total                             |      R$ 364.000,00             | 
+
 
 ![Orçamento](img/02-orcamento.png)
