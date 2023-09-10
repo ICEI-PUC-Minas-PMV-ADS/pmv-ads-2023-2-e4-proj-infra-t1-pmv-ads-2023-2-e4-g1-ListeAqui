@@ -12,9 +12,6 @@ O diagrama de classes ilustra graficamente como será a estrutura do software, e
 
 ![Diagrama de classes](img/diagrama-classes.PNG)
 
-> - [Diagramas de Classes - Documentação da IBM](https://www.ibm.com/docs/pt-br/rational-soft-arch/9.6.1?topic=diagrams-class)
-> - [O que é um diagrama de classe UML? | Lucidchart](https://www.lucidchart.com/pages/pt/o-que-e-diagrama-de-classe-uml)
-
 ## Modelo ER
 
 O Modelo ER representa através de um diagrama como as entidades (coisas, objetos) se relacionam entre si na aplicação interativa.
