@@ -171,7 +171,7 @@ Utilizando o PMBoK padrão todo o projeto será gerenciado utilizando planilhas 
 
 ## Gerenciamento de Tempo
 
-|                                                           |
+
 
 ## Gerenciamento de Equipe
 
