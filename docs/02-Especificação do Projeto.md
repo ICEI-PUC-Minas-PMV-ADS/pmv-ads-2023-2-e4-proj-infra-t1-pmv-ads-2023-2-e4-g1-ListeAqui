@@ -16,12 +16,12 @@ Apresente uma visão geral do que será abordado nesta parte do documento, enume
 |    Carlos Vieira | Informações:                       |                                        |
 |--------------------|------------------------------------|----------------------------------------|
 |<img src="img/Carlos.png" width = 250 >| **Idade:** 28 anos <br> **Ocupação:** Estudante/Estagiário <br> </ul>|**Aplicativos:**<br><ul>● Instagram <br>● WhatsApp <br> </ul>|
-|**Motivações:**<br><ul>● Carlos está sempre ocupado com as aulas, trabalhos e estágio, e tem um orçamento limitado. Ele valoriza a economia e está sempre procurando maneiras de economizar dinheiro em suas compras de supermercado.</ul>|**Frustrações:**<br> </ul>●  Busca mandeiras de criar listas de compras acessíveis e conseguir salvar o quanto gastou para lembrar nas prõximas idas ao mercado.<br><ul>|**Hobbies/Histórias:**<br><ul>● Jogar videgames <br>● Ir a bares com amigos;.</ul>|
+|**Motivações:**<br><ul>● Carlos está sempre ocupado com as aulas, trabalhos e estágio, e tem um orçamento limitado. Ele valoriza a economia e está sempre procurando maneiras de economizar dinheiro em suas compras de supermercado.</ul>|**Frustrações:**<br> </ul>●  Busca mandeiras de criar listas de compras acessíveis e conseguir salvar o quanto gastou para lembrar nas próximas idas ao mercado.<br><ul>|**Hobbies/Histórias:**<br><ul>● Jogar videgames <br>● Ir a bares com amigos;.</ul>|
 
 |    Cleide Santana  | Informações:                       |                                        |
 |--------------------|------------------------------------|----------------------------------------|
 |<img src="img/Cleide.png" width = 250 >| **Idade:** 43 anos <br> **Ocupação:** Dona de casa|**Aplicativos:**<br><ul>● Dacebook <br>● WhatsApp <br></ul>|
-|**Motivações:**<br><ul>● Ela é a principal responsável pelas compras da família e está sempre buscando maneiras de tornar esse processo mais eficiente.. </ul>|**Frustrações:**<br><ul>●  Gostaria de ter uma ferramenta em que guardar o histórico anual das compras pois deseja ter uma perspectiva de quanto ẽ utilizado mensalmente nas compras.|**Hobbies/Histórias:**<br><ul>● Assistir filmes; <br>● Visitar parques com a família;.</ul>|
+|**Motivações:**<br><ul>● Ela é a principal responsável pelas compras da família e está sempre buscando maneiras de tornar esse processo mais eficiente.. </ul>|**Frustrações:**<br><ul>●  Gostaria de ter uma ferramenta em que guardar o histórico anual das compras pois deseja ter uma perspectiva de quanto é utilizado mensalmente nas compras.|**Hobbies/Histórias:**<br><ul>● Assistir filmes; <br>● Visitar parques com a família;.</ul>|
  
 
 ## Histórias de Usuários
