@@ -188,7 +188,7 @@ A equipe cumprirá suas tarefas de acordo com as habilidades e características 
 | Requisitos não funcionais | João   |  Concluído                                                  |
 | Restrições  | João   |  Concluído                                                                |
 | Diagrama de casos de uso | Rafael |  Concluído                                                   |
-| Arquitetura de solução | Silvia  |  Pendente                                                     |
+| Arquitetura de solução | Silvia  |  Concluído                                                     |
 | Matriz de rastreabilidade | Rafael |  Concluído                                                  |
 | Github  |   Todos  |     Em andamento                                                            | 
 | Revisão do projeto  |  Todos    |      Pendente                                                  |
