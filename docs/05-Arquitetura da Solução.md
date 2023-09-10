@@ -17,7 +17,7 @@ O diagrama de classes ilustra graficamente como será a estrutura do software, e
 
 ## Modelo ER
 
-O Modelo ER representa através de um diagrama como as entidades (coisas, objetos) se relacionam entre si na aplicação interativa.]
+O Modelo ER representa através de um diagrama como as entidades (coisas, objetos) se relacionam entre si na aplicação interativa.
 
 As referências abaixo irão auxiliá-lo na geração do artefato “Modelo ER”.
 
@@ -27,7 +27,7 @@ As referências abaixo irão auxiliá-lo na geração do artefato “Modelo ER�
 
 O Esquema Relacional corresponde à representação dos dados em tabelas juntamente com as restrições de integridade e chave primária.
  
-![ER](img/ModeloRelacional.PNG)
+![ER](img/ModeloER.jpg)
 
 ## Modelo Físico
 
