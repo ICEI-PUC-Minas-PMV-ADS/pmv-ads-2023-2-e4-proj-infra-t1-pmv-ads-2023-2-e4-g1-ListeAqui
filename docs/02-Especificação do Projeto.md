@@ -62,12 +62,18 @@ O usuário não possui uma forma para consolidar em lista os seus itens a serem 
 
 ## Indicadores de Desempenho
 
-Apresente aqui os principais indicadores de desempenho e algumas metas para o processo. Atenção: as informações necessárias para gerar os indicadores devem estar contempladas no diagrama de classe. Colocar no mínimo 5 indicadores. 
+|     INDICADOR      |     OBJETIVO       |       DESCRIÇÃO      |  FORMULA DE CÁLCULO  | FONTES DE DADOS  | 
+|--------------------|--------------------|----------------------|----------------------|-------------------|
+| Média de Participantes por Evento|Constatar a média de participantes por Evento|Apresentar a porcentagem de participação de moradores por evento |(Quantidade de participantes/Total de Eventos)*100 |Tabela de moradores/eventos| Visualizar o histograma de média de participação de moradores por eventos. |
+|Porcentagem de eventos por área de lazer|Constatar quais áreas de lazer são mais utilizadas em eventos a fim de auxiliar o síndico a organizar-se melhor.| Apresentar a porcentagem de ocupação das áreas de lazer reservadas para eventos.|(Eventos em uma área de lazer/Total de eventos)*100  |Tabelas de eventos e áreas de lazer.|Visualizar um gráfico de pizza relativo aos eventos por área de lazer|
+| Quantidade de eventos por tipo de eventos  | Constatar qual é o tipo de evento mais recorrente| Apresentar a porcentagem de quais tipos de eventos ocorrem com mais frequência  |(Tipo de evento)/(Quantidade total de eventos) * 100| Tabela de eventos | Visualizar o histograma da quantidade de eventos por tipo de eventos |
+| Média de eventos por ano | Constatar a média de incidência de eventos no período de um ano| Apresentar a média de ocorrência de eventos|(Quantidade de eventos/365) c Tabela de eventos c Visualizar o histograma de eventos. | 
+| Quantidade de participantes por tipo de eventos| Constatar a quantidade de participantes por tipo de evento| Apresentar a quantidade de moradores por tipo de evento.| (Quantidade de participantes por tipo de evento/Tipo de evento) | Tabelas de moradores/eventos e de eventos | Visualizar um gráfico de barras relativo a quantidade de moradores em cada tipo de evento.|
 
-Usar o seguinte modelo: 
 
-![Indicadores de Desempenho](img/02-indic-desemp.png)
-Obs.: todas as informações para gerar os indicadores devem estar no diagrama de classe a ser apresentado a posteriori. 
+
+
+
 
 ## Requisitos
 
