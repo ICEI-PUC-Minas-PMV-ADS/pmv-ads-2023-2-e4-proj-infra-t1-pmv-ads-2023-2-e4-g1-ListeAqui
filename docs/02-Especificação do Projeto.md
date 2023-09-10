@@ -171,40 +171,7 @@ Utilizando o PMBoK padrão todo o projeto será gerenciado utilizando planilhas 
 
 ## Gerenciamento de Tempo
 
-|                              GESTÃO DE PROJETOS - GESTÃO DE TEMPO                                |
-|--------------------------------------------------------------------------------------------------|  
-|  ESPECIFICAÇÃO DO PROJETO        |      DURAÇÃO  | INICIO   | TERMINO |     PREDECEDORES   | 
-| Projeto estante                  |     114 |   01/08/2023 | 10/09/2023|                          |   
-| Entregar doc. proposta d. solução| 5 | 01/08/2023 | 10/09/2023|                                 |
-| Documentação de contexto         | 7 | 01/08/2023 | 10/09/2023 |          |
-| Especificação do projeto         | 10 | 01/08/2023 | 10/09/2023    |              |
-| Definição requisitos funcionais e não funcionais | 12 | 01/08/2023 | 10/09/2023 |                |       
-| Diagrama de casos de uso         | 6 | 01/08/2023 | 10/09/2023   |                               |
-| Matriz de rastreabilidade        | 5 | 01/08/2023 | 10/09/2023 |                              1         |
-| Gerenciamento de projeto         | 6 | 01/08/2023 | 10/09/2023 |                    |
-| Arquitetura da solução           | 7 | 04/09/2023 | 01/10/2023 |                                |
-| Modelagem de processos de negocio| 10 | 04/09/2023 | 01/10/2023 |                               |
-| Diagrama entidade - relacional   | 7 | 04/09/2023 | 01/10/2023 |                                   |
-| Diagrama de fluxo                | 6 | 04/09/2023 | 01/10/2023 |                       2         |
-| Wirefremes                       | 6 | 04/09/2023 | 01/10/2023 |                                 |
-| Definição de software            | 9 | 04/09/2023 | 01/10/2023 |                                            |
-| Qualidade de software            | 5 | 04/09/2023 | 01/10/2023 |                       |
-| Plano de testes de funcionalidades e  usabilidades  | 9 | 04/09/2023 | 01/10/2023  |             |
-| Desenvolvimento das primeiras funcionalidades | 25 | 02/10/2023 | 29/10/2023 |                   |
-| Testar funcionalidades           | 7 | 02/10/2023  | 29/10/2023 |                        3       |
-| Registrar testes das funcionalidades| 5 | 02/10/2023  | 29/10/2023 |                            |
-| Registro dos testes de usabilidade  | 5 | 02/10/2023  | 29/10/2023 |                              |
-| Desenvolvimento das demais funcionalidades| 20 | 30/10/2023 | 26/11/2023 |                       |
-| Testar funcionalidades| 7 | 30/10/2023 | 26/11/2023 |                                    4       |
-| Registrar testes das funcinalidades | 5 |  30/10/2023|  26/11/2023 |                             |
-| Registro dos testes de usabilidade | 5 | 30/10/2023 | 26/11/2023 |                               |       
-| Validar trabalho pré-entrega | 3 | 27/11/2023 | 10/12/2023 |                                     |
-| Entrega da solução desenvolvida | 3 | 27/11/2023 | 10/12/2023 |                                  |
-| Entrega da documentação atualizada | 3  | 27/11/2023 | 10/12/2023 |                      5       |
-| Gravar video com apresentação da solução | 3 | 27/11/2023 | 10/12/2023 |                         |
-| Realizar apresentação | 4 | 27/11/2023 | 10/12/2023 |                                            |
-
-
+|                                                           |
 
 ## Gerenciamento de Equipe
 
