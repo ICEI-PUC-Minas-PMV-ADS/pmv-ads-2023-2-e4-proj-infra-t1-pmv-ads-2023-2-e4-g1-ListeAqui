@@ -25,7 +25,9 @@ Nosso projeto tem como objetivo oferecer uma solução que possibilite a organiz
 
 ## Instruções de utilização
 
-Assim que a primeira versão do sistema estiver disponível, deverá complementar com as instruções de utilização. Descreva como instalar eventuais dependências e como executar a aplicação.
+Assim que a primeira versão do sistema estiver disponível, deverá complementar com as instruções de utilização. 
+
+URL da aplicação usando Swagger -> https://localhost:7029/swagger/index.html
 
 # Documentação
 
