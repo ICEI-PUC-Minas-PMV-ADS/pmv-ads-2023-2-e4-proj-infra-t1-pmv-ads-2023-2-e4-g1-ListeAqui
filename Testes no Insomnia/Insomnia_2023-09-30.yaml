@@ -1,0 +1,544 @@
+_type: export
+__export_format: 4
+__export_date: 2023-09-30T15:27:56.569Z
+__export_source: insomnia.desktop.app:v2023.5.8
+resources:
+  - _id: req_9f720502e3334811a9f0bda55a1790ab
+    parentId: fld_cc57c46552634341aaffc77c533c1d31
+    modified: 1695086868442
+    created: 1694266866665
+    url: https://localhost:7029/api/Listas
+    name: GetAll
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - name: User-Agent
+        value: insomnia/2023.5.8
+    authentication:
+      type: bearer
+      token: "{{ _.tokenProjeto }}"
+    metaSortKey: -1694266866665
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_cc57c46552634341aaffc77c533c1d31
+    parentId: wrk_0e06a9011ab04610a6544bef367b3fd0
+    modified: 1694266812373
+    created: 1694266812373
+    name: Listas
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1694266812373
+    _type: request_group
+  - _id: wrk_0e06a9011ab04610a6544bef367b3fd0
+    parentId: null
+    modified: 1694266779742
+    created: 1694266779742
+    name: Eixo4_TesteAPI
+    description: ""
+    scope: collection
+    _type: workspace
+  - _id: req_38d3fe885cb9497db6701821f28e5a49
+    parentId: fld_cc57c46552634341aaffc77c533c1d31
+    modified: 1695683977815
+    created: 1694268693490
+    url: https://localhost:7029/api/Listas/9
+    name: GetById
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - name: User-Agent
+        value: insomnia/2023.5.8
+    authentication: {}
+    metaSortKey: -1694082078324.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_34e5e1a6b7e04f1898a93b243a7692a9
+    parentId: fld_cc57c46552634341aaffc77c533c1d31
+    modified: 1695682896231
+    created: 1694273760930
+    url: https://localhost:7029/api/Listas/3
+    name: Delete
+    description: ""
+    method: DELETE
+    body: {}
+    parameters: []
+    headers:
+      - name: User-Agent
+        value: insomnia/2023.5.8
+    authentication: {}
+    metaSortKey: -1694035881239.375
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_261b161214ae474d9751e55c85d7f135
+    parentId: fld_cc57c46552634341aaffc77c533c1d31
+    modified: 1695682919186
+    created: 1694269881662
+    url: https://localhost:7029/api/Listas/1
+    name: Update
+    description: ""
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-2
+          {
+        		"id": 1,
+        		"nomeDaLista": "Compras do mês de Setembro",
+        		"mercado": "Brami",
+        		"dataDaLista": "0001-01-01T00:00:00",
+        		"itens": null,
+        		"clientes": null
+        	}
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/2023.5.8
+    authentication: {}
+    metaSortKey: -1693989684154.25
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_e0e7ab800d2f4b2d842271a3c7b7511e
+    parentId: fld_cc57c46552634341aaffc77c533c1d31
+    modified: 1695682800604
+    created: 1694267403584
+    url: https://localhost:7029/api/Listas
+    name: Create
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-2
+          {
+          "nomeDaLista": "string",
+          "mercado": "string",
+          "dataDaLista": "2023-09-25T22:58:28.580Z"
+        	}
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/2023.5.8
+    authentication: {}
+    metaSortKey: -1693897289984
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_705b57f4754f4a6987067049e1196ad5
+    parentId: fld_e56755b72d054f959fe75295a40c972f
+    modified: 1695681098586
+    created: 1695678744609
+    url: https://localhost:7029/api/Clientes
+    name: GetAll
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - name: User-Agent
+        value: insomnia/2023.5.8
+    authentication:
+      type: bearer
+      token: "{{ _.tokenProjeto }}"
+    metaSortKey: -1694266866665
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_e56755b72d054f959fe75295a40c972f
+    parentId: wrk_0e06a9011ab04610a6544bef367b3fd0
+    modified: 1695678744601
+    created: 1695678744601
+    name: Cliente
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1693897223796
+    _type: request_group
+  - _id: req_c8107e607ba04a3a9e43531b029e9d09
+    parentId: fld_e56755b72d054f959fe75295a40c972f
+    modified: 1695684016242
+    created: 1695678744623
+    url: https://localhost:7029/api/Clientes/10
+    name: GetById
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - name: User-Agent
+        value: insomnia/2023.5.8
+    authentication: {}
+    metaSortKey: -1694082078324.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_4631c9726c26482689ef460dd0c39d3e
+    parentId: fld_e56755b72d054f959fe75295a40c972f
+    modified: 1695682984783
+    created: 1695678744627
+    url: https://localhost:7029/api/Clientes/9
+    name: Delete
+    description: ""
+    method: DELETE
+    body: {}
+    parameters: []
+    headers:
+      - name: User-Agent
+        value: insomnia/2023.5.8
+    authentication: {}
+    metaSortKey: -1694035881239.375
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_a8094be745614dee87cadc1ee3830391
+    parentId: fld_e56755b72d054f959fe75295a40c972f
+    modified: 1695683097974
+    created: 1695678744625
+    url: https://localhost:7029/api/Clientes/13
+    name: Update
+    description: ""
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |+2
+          {
+        	"id": 13,
+          "nome": "Ronald",
+          "password": "1",
+          "email": "jc_faria@id.uff.br",
+        	"listas": 8
+        	}
+
+
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/2023.5.8
+    authentication: {}
+    metaSortKey: -1693989684154.25
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_f87fa87b1efb4b6bbb21a01432c26a76
+    parentId: fld_e56755b72d054f959fe75295a40c972f
+    modified: 1695681167646
+    created: 1695678744615
+    url: https://localhost:7029/api/Clientes/authenticate
+    name: Autenticacao
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-2
+          {
+          "email": "jg_faria@id.uff.br",
+          "passWord": "1"
+        	}
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/2023.5.8
+    authentication: {}
+    metaSortKey: -1693897289984
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_93de97d042ed498dafbf935ade906f97
+    parentId: fld_e56755b72d054f959fe75295a40c972f
+    modified: 1695683122677
+    created: 1695678938779
+    url: https://localhost:7029/api/Clientes
+    name: Cadastrar
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-2
+          {
+          "nome": "Ronaldo",
+          "password": "1",
+          "email": "jc_faria@id.uff.br",
+        	"listas": 9
+        	}
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/2023.5.8
+    authentication: {}
+    metaSortKey: -1693712501643.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_0bba6e33c1584a278e607f10468901fa
+    parentId: fld_e56755b72d054f959fe75295a40c972f
+    modified: 1695684065750
+    created: 1695683475635
+    url: https://localhost:7029/api/Clientes/10/listas
+    name: listas/clientes
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-2
+          {
+         "listaId": 8,
+        "ClienteId":10
+        	}
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/2023.5.8
+    authentication: {}
+    metaSortKey: -1693620107473.25
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_46e040b969754d21aa113d9164d60ef0
+    parentId: fld_93cccef4f43f44c9934fc17f64bf8c9b
+    modified: 1695679613625
+    created: 1695679408425
+    url: https://localhost:7029/api/Itens
+    name: GetAll
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - name: User-Agent
+        value: insomnia/2023.5.8
+    authentication:
+      type: bearer
+      token: "{{ _.tokenProjeto }}"
+    metaSortKey: -1694266866665
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_93cccef4f43f44c9934fc17f64bf8c9b
+    parentId: wrk_0e06a9011ab04610a6544bef367b3fd0
+    modified: 1695679538499
+    created: 1695679408422
+    name: Itens
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1693712429507.5
+    _type: request_group
+  - _id: req_a8a56e0d889049d88090831e903bccb0
+    parentId: fld_93cccef4f43f44c9934fc17f64bf8c9b
+    modified: 1695683949871
+    created: 1695679408429
+    url: https://localhost:7029/api/Itens/8
+    name: GetById
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - name: User-Agent
+        value: insomnia/2023.5.8
+    authentication: {}
+    metaSortKey: -1694082078324.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_d429af0403c545058849006546ea31fb
+    parentId: fld_93cccef4f43f44c9934fc17f64bf8c9b
+    modified: 1695683154565
+    created: 1695679408433
+    url: https://localhost:7029/api/Itens/1
+    name: Delete
+    description: ""
+    method: DELETE
+    body: {}
+    parameters: []
+    headers:
+      - name: User-Agent
+        value: insomnia/2023.5.8
+    authentication: {}
+    metaSortKey: -1694035881239.375
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_736d65330af94ae787f7c4ba7f9228c0
+    parentId: fld_93cccef4f43f44c9934fc17f64bf8c9b
+    modified: 1695683275948
+    created: 1695679408432
+    url: https://localhost:7029/api/Itens/12
+    name: Update
+    description: ""
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |2
+          {"id":12 ,
+          "descricao": "string",
+          "data": "2023-09-25T23:06:40.179Z",
+          "valor": 0,
+          "quantidade": 0,
+          "listaId": 8}
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/2023.5.8
+    authentication: {}
+    metaSortKey: -1693989684154.25
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_01dbeed5e9a14b69b991c234ff011a22
+    parentId: fld_93cccef4f43f44c9934fc17f64bf8c9b
+    modified: 1695683314055
+    created: 1695679408435
+    url: https://localhost:7029/API/Itens
+    name: Cadastrar
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |+2
+          {
+        		"descricao": "Queijo",
+        		"data": "2023-09-25T22:11:11.014Z",
+        		"valor":10,
+        		"quantidade": 10,
+        		"listaId":8
+        	
+        	}
+
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/2023.5.8
+    authentication: {}
+    metaSortKey: -1693712501643.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: env_1be36b42d3f7ed46fc8f310bdf28f93c2e3f9c7f
+    parentId: wrk_0e06a9011ab04610a6544bef367b3fd0
+    modified: 1695082593734
+    created: 1694266779749
+    name: Base Environment
+    data:
+      tokenProjeto: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiI0Iiwicm9sZSI6Ikpvw6NvIGRhcyBDb3V2ZXMiLCJuYmYiOjE2OTUwODI1MDEsImV4cCI6MTY5NTExMTMwMSwiaWF0IjoxNjk1MDgyNTAxfQ.lj6LT3Yoxipyhd-qKgLXZOy4YSHNuV-0QnK7HXXyTms
+    dataPropertyOrder:
+      "&":
+        - tokenProjeto
+    color: null
+    isPrivate: false
+    metaSortKey: 1694266779749
+    _type: environment
+  - _id: jar_1be36b42d3f7ed46fc8f310bdf28f93c2e3f9c7f
+    parentId: wrk_0e06a9011ab04610a6544bef367b3fd0
+    modified: 1694266779751
+    created: 1694266779751
+    name: Default Jar
+    cookies: []
+    _type: cookie_jar
