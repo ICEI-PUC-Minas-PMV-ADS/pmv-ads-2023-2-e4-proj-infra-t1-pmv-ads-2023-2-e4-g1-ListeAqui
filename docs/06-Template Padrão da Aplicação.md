@@ -13,7 +13,7 @@ O template do site é composto pelos seguintes layouts:
 
 Além dos layouts, o site também possui uma paleta de cores bem definida:
 
-![blue](img/azul-list-aqui.png) Blue, seu hexadecimal é:
+![blue](img/azul-list-e-aqui.png) Blue, seu hexadecimal é:
 ```
 #f0f8ff
 ```
