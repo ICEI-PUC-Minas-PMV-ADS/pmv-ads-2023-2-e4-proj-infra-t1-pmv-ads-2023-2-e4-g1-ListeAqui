@@ -32,11 +32,13 @@ O arquivo está dentro da pasta src\bd.
 |Função    | Tecnologia  | 
 |------------|-----------------------------------------|
 | Linguagem | JavaScript | 
-| Framework | ReactNative | 
+| Framework | ReactNative |
+| Liguagem | C# |
 | Bibliotecas | React Native Paper, React Navigation, Json server, Json server auth, Axios | 
-| IDE | Visual Studio Code | Visual Studio
+| IDE | Visual Studio Code | Visual Studio |
 | Ferramentas | Microsoft Teams, GitHub, Whatsapp | 
-| Banco de dados | noSQL | 
+| Banco de dados | noSQL | Firebase
+| Banco de dados | SQL |
 
 ## Hospedagem
 
