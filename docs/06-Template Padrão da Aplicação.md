@@ -1,7 +1,5 @@
 # Template Padrão da Aplicação
 
-# Template Padrão da Aplicação
-
 Layout padrão da aplicação que será utilizado em todas as páginas com a definição de identidade visual, aspectos de responsividade e iconografia, a estrutura do site é mostrada a seguir:
 
 
@@ -30,10 +28,8 @@ Os arquivos que contém os layouts são:
 
 - login.js
 - home.js
-- clientes.js
-- objetivos.js
-- metas.js
-- carteira.js
+- cadastroProduto.js
+- perfil.js
 
 ## Header
 
