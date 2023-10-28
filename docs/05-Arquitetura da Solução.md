@@ -37,8 +37,8 @@ O arquivo está dentro da pasta src\bd.
 | Bibliotecas | React Native Paper, React Navigation, Json server, Json server auth, Axios | 
 | IDE | Visual Studio Code | Visual Studio |
 | Ferramentas | Microsoft Teams, GitHub, Whatsapp | 
-| Banco de dados | noSQL | Firebase
-| Banco de dados | SQL |
+| Banco de dados | noSQL | Cloud Firestore | Firebase |
+| Banco de dados | mySQL |
 
 ## Hospedagem
 
