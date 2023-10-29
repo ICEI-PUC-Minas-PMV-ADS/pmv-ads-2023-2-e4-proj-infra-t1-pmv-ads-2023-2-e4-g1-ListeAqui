@@ -17,3 +17,5 @@ RF-11 - A aplicação deve validar o login do usuário
 <img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t1-pmv-ads-2023-2-e4-g1-ListeAqui/assets/86859418/ac8b0d1b-fd90-417c-a22e-a0d43b5a853a"></img>
 
 RF-12 - A aplicação deve ter a possibilidade de redefinir senha.
+
+<img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t1-pmv-ads-2023-2-e4-g1-ListeAqui/assets/86859418/a7bf01a4-fbd7-4065-a11e-6f2ee0972804"></img>
