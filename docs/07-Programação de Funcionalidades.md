@@ -19,3 +19,7 @@ RF-11 - A aplicação deve validar o login do usuário
 RF-12 - A aplicação deve ter a possibilidade de redefinir senha.
 
 <img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t1-pmv-ads-2023-2-e4-g1-ListeAqui/assets/86859418/a7bf01a4-fbd7-4065-a11e-6f2ee0972804"></img>
+
+Serviço de e-mail firebase - Redefinição de senha.
+
+<img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t1-pmv-ads-2023-2-e4-g1-ListeAqui/assets/86859418/711714ff-4e6b-481b-b5ea-bc858f4f6f19"></img>
