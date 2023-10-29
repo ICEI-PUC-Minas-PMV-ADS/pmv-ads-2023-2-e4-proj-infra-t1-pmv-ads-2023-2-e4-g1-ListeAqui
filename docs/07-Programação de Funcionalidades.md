@@ -24,6 +24,6 @@ Serviço de e-mail firebase - Redefinição de senha.
 
 <img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t1-pmv-ads-2023-2-e4-g1-ListeAqui/assets/86859418/711714ff-4e6b-481b-b5ea-bc858f4f6f19"></img>
 
-Formulário Redefinindo a senha - https://listeaqui.firebaseapp.com/__/auth/ ....
+Formulário Redefinindo a senha - "https://listeaqui.firebaseapp.com/__/auth/ .... "
 
 <img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t1-pmv-ads-2023-2-e4-g1-ListeAqui/assets/86859418/18d44e39-3a56-42fe-875b-563cf33a689d"></img>
