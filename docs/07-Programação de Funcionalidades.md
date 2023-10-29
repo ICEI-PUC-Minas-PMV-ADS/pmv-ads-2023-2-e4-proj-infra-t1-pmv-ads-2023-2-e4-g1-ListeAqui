@@ -6,7 +6,7 @@ Conforme o fluxo de usuários detalharemos a implementação das  funcionalidade
 
 Classe / módulo de configuração e inicialização do Firebase
 
-<img src="módulo de configuração e inicialização do Firebase"></img>
+<img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t1-pmv-ads-2023-2-e4-g1-ListeAqui/assets/86859418/5ed2d4a1-afed-48c1-b715-3266c7a0eb1a"></img>
 
 A implementação seguiu a solicitação dos seguintes requisitos:
 
