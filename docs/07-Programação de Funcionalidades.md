@@ -4,6 +4,10 @@ Conforme o fluxo de usuários detalharemos a implementação das  funcionalidade
 
 <img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t1-pmv-ads-2023-2-e4-g1-ListeAqui/assets/86859418/5b8ecb28-af09-4480-a399-522ba038d81d"></img>
 
+Classe / módulo de configuração e inicialização do Firebase
+
+<img src="módulo de configuração e inicialização do Firebase"></img>
+
 A implementação seguiu a solicitação dos seguintes requisitos:
 
 RF-01 - O aplicativo deve permitir o cadastro de usuários
