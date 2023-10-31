@@ -51,6 +51,7 @@ const Cadastre = ({ navigation }) => {
   }, 800);
 };
 
+
   return (
     <ScrollView keyboardShouldPersistTaps="handled">
       <TopBar navigation={navigation} />
@@ -105,7 +106,7 @@ const Cadastre = ({ navigation }) => {
           <View style={styles.btnCadastrarOrientacao}>
             <Button
               mode="contained"
-              onPress={Voltar}
+              onPress={CadastrarUsuario}
               contentStyle={styles.button}
               labelStyle={styles.buttonLabel}
               theme={theme}
