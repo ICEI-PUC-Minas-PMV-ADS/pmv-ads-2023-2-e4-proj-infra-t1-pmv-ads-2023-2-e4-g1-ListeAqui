@@ -1,15 +1,35 @@
 # Programação de Funcionalidades
 
-<span style="color:red">Pré-requisitos: <a href="2-Especificação do Projeto.md"> Especificação do Projeto</a></span>, <a href="3-Projeto de Interface.md"> Projeto de Interface</a>, <a href="4-Metodologia.md"> Metodologia</a>, <a href="3-Projeto de Interface.md"> Projeto de Interface</a>, <a href="5-Arquitetura da Solução.md"> Arquitetura da Solução</a>
+Conforme o fluxo de usuários detalharemos a implementação das  funcionalidades de Login, Cadastro de Usuários e Recuperação de Senha em nosso sistema. Essas funcionalidades são executadas inteiramente no front-end da aplicação, utilizando o Firebase Authentication para garantir uma autenticação segura e eficiente. Adicionalmente, integramos o Cloud Firestore, um banco de dados NoSQL orientado a documentos, para o gerenciamento eficaz de dados dos usuários e dessa forma conseguir utilizar esses dados para autenticação na API responsável por tratar das demais funções do sistema, essa escolha estratégica pelo Firestore, devido à sua natureza NoSQL, oferece flexibilidade, escalabilidade e uma modelagem de dados dinâmica, que se alinha perfeitamente às necessidades de armazenamento de dados variáveis e em constante evolução do nosso sistema. Juntas, essas tecnologias proporcionam uma solução robusta para autenticação de usuários e gerenciamento de dados, assegurando uma excelente experiência de usuário.
 
-Implementação do sistema descritas por meio dos requisitos funcionais e/ou não funcionais. Deve relacionar os requisitos atendidos os artefatos criados (código fonte) além das estruturas de dados utilizadas e as instruções para acesso e verificação da implementação que deve estar funcional no ambiente de hospedagem.
+<img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t1-pmv-ads-2023-2-e4-g1-ListeAqui/assets/86859418/5b8ecb28-af09-4480-a399-522ba038d81d"></img>
 
-Para cada requisito funcional, pode ser entregue um artefato desse tipo
+Classe / módulo de configuração e inicialização do Firebase ( artefato ) -> 'firebase.js' 
 
-> **Links Úteis**:
->
-> - [Trabalhando com HTML5 Local Storage e JSON](https://www.devmedia.com.br/trabalhando-com-html5-local-storage-e-json/29045)
-> - [JSON Tutorial](https://www.w3resource.com/JSON)
-> - [JSON Data Set Sample](https://opensource.adobe.com/Spry/samples/data_region/JSONDataSetSample.html)
-> - [JSON - Introduction (W3Schools)](https://www.w3schools.com/js/js_json_intro.asp)
-> - [JSON Tutorial (TutorialsPoint)](https://www.tutorialspoint.com/json/index.htm)
+<img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t1-pmv-ads-2023-2-e4-g1-ListeAqui/assets/86859418/5ed2d4a1-afed-48c1-b715-3266c7a0eb1a"></img>
+
+A implementação seguiu a solicitação dos seguintes requisitos:
+
+RF-01 - O aplicativo deve permitir o cadastro de usuários
+
+<img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t1-pmv-ads-2023-2-e4-g1-ListeAqui/assets/86859418/00a925a6-cfab-472c-96ba-7450f545218c"></img>
+
+RF-02 - O aplicativo deve permitir o login de usuários
+
+<img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t1-pmv-ads-2023-2-e4-g1-ListeAqui/assets/86859418/4f11d7fb-d6d9-4a6f-bb83-4af79154d519"></img>
+
+RF-11 - A aplicação deve validar o login do usuário
+
+<img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t1-pmv-ads-2023-2-e4-g1-ListeAqui/assets/86859418/ac8b0d1b-fd90-417c-a22e-a0d43b5a853a"></img>
+
+RF-12 - A aplicação deve ter a possibilidade de redefinir senha.
+
+<img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t1-pmv-ads-2023-2-e4-g1-ListeAqui/assets/86859418/a7bf01a4-fbd7-4065-a11e-6f2ee0972804"></img>
+
+Serviço de e-mail firebase - Redefinição de senha.
+
+<img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t1-pmv-ads-2023-2-e4-g1-ListeAqui/assets/86859418/711714ff-4e6b-481b-b5ea-bc858f4f6f19"></img>
+
+Formulário Redefinindo a senha - " https: //listeaqui.firebaseapp.com/__/auth/ .... "
+
+<img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t1-pmv-ads-2023-2-e4-g1-ListeAqui/assets/86859418/18d44e39-3a56-42fe-875b-563cf33a689d"></img>
