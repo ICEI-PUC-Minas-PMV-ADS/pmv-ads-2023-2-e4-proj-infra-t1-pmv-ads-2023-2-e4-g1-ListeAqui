@@ -18,6 +18,11 @@ builder.Services.AddDbContext<AppDbContext>(options=>
 //UseMySql
 );
 
+// configurando para o smarterAspNet
+builder.Services.AddDbContext<AppDbContext>(options =>
+    options.UseMySql("Server=MYSQL8002.site4now.net;Database=db_aa1201_listeaq;Uid=aa1201_listeaq;Pwd=listeaquipuc123", ServerVersion.Parse("10.4.25-MariaDB"))
+);
+
 builder.Services.AddAuthentication(options =>
 {
 
@@ -45,12 +50,17 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
+// Não usar, pois o swagger está na rota /swagger/index.html
+//if (app.Environment.IsDevelopment())
+//{
     app.UseSwagger();
     app.UseSwaggerUI();
-}
+        //c =>
+    //{
+       // c.SwaggerEndpoint("/swagger/v1/swagger.json", "Minha API V1");
+        //c.RoutePrefix = string.Empty;
+    //});
+//}
 
 app.UseHttpsRedirection();
 
