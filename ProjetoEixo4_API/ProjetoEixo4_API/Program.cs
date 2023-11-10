@@ -9,6 +9,18 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
+// Adicione a configuração de CORS
+builder.Services.AddCors(options =>
+{
+    options.AddDefaultPolicy(
+        corsPolicyBuilder =>
+        {
+            corsPolicyBuilder.WithOrigins("*") // Substitua "*" por domínios específicos para mais segurança
+                             .AllowAnyHeader()
+                             .AllowAnyMethod();
+        });
+});
+
 builder.Services.AddControllers()
     .AddJsonOptions(x => x.JsonSerializerOptions.ReferenceHandler=ReferenceHandler.IgnoreCycles);
 
@@ -63,6 +75,10 @@ var app = builder.Build();
 //}
 
 app.UseHttpsRedirection();
+
+// Habilita o CORS
+app.UseCors();
+
 
 app.UseAuthentication();
 app.UseAuthorization();
