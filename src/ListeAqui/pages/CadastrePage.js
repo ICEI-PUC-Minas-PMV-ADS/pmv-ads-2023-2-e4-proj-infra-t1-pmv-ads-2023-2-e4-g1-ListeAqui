@@ -1,47 +1,48 @@
 import React, { useState, useRef } from 'react';
 import { View, StyleSheet, ScrollView } from 'react-native';
 import { TextInput, Button, Headline } from 'react-native-paper';
+import axios from 'axios';
 import theme from '../components/DefaultTheme';
 import TopBar from '../components/TopBar';
 import Toast, { DURATION } from 'react-native-easy-toast';
-import { getAuth, createUserWithEmailAndPassword, updateProfile } from 'firebase/auth';
-import { getFirestore, setDoc, doc } from 'firebase/firestore';
 
 const Cadastre = ({ navigation }) => {
   const toastRef = useRef();
   const [nome, setNome] = useState('');
-  const [sobrenome, setSobrenome] = useState('');
+  const [sobrenome, setSobrenome] = useState(''); // Estado para sobrenome
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
 
-  const showToast = () => {
-    toastRef.current.show('This is a toast message', DURATION.LENGTH_LONG);
+  const showToast = (message) => {
+    toastRef.current.show(message, DURATION.LENGTH_LONG);
   };
 
   const CadastrarUsuario = async () => {
+    if (!nome || !sobrenome || !email || !senha) {
+      showToast('Preencha todos os campos');
+      return;
+    }
+
     try {
-      const auth = getAuth(); 
-      const firestore = getFirestore(); 
+      const nomeCompleto = `${nome} ${sobrenome}`; // Concatena o nome e sobrenome
+      const endpoint = 'http://listeaqui-001-site1.btempurl.com/api/clientes';
 
-      const { user } = await createUserWithEmailAndPassword(auth, email, senha);
-
-      await updateProfile(user, {
-        displayName: `${nome} ${sobrenome}`,
+      const response = await axios.post(endpoint, {
+        id: 0, // Id é 0 para novos registros, assumindo que a API gera um novo ID
+        nome: nomeCompleto, // Utiliza o nome completo
+        password: senha,
+        email: email,
       });
 
-      await setDoc(doc(firestore, 'usuarios', user.uid), {
-        nome,
-        sobrenome,
-        email,
-        userId: user.uid,
-      });
-
-      toastRef.current.show('Usuário cadastrado com sucesso!', DURATION.LENGTH_LONG);
-      setTimeout(() => {
-        navigation.navigate('Login');
-      }, 1800);
+      if (response.status === 200 || response.status === 201) {
+        showToast('Usuário cadastrado com sucesso!');
+        setTimeout(() => {
+          navigation.navigate('Login');
+        }, 1800);
+      }
     } catch (error) {
-      toastRef.current.show('Preencha o formulário para cadastro', DURATION.LENGTH_LONG);
+      showToast('Erro ao cadastrar usuário. Tente novamente.');
+      console.error(error);
     }
   };
 
