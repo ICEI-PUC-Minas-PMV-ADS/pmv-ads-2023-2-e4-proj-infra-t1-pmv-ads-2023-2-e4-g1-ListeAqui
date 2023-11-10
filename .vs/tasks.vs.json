@@ -1,0 +1,10 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskLabel": "tarefa-ProjetoEixo4_API",
+      "appliesTo": "ProjetoEixo4_API/ProjetoEixo4_API.sln",
+      "type": "launch"
+    }
+  ]
+}
