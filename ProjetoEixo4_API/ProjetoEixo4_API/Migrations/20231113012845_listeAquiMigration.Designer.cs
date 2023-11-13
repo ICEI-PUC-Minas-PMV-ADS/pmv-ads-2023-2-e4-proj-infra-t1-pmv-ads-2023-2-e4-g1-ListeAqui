@@ -11,8 +11,8 @@ using ProjetoEixo4_API.Models;
 namespace ProjetoEixo4_API.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20231107021015_PrimeiraMigration")]
-    partial class PrimeiraMigration
+    [Migration("20231113012845_listeAquiMigration")]
+    partial class listeAquiMigration
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -51,7 +51,8 @@ namespace ProjetoEixo4_API.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("Data")
+                    b.Property<DateTime?>("Data")
+                        .IsRequired()
                         .HasColumnType("datetime(6)");
 
                     b.Property<string>("Descricao")
@@ -74,35 +75,13 @@ namespace ProjetoEixo4_API.Migrations
                     b.ToTable("Itens");
                 });
 
-            modelBuilder.Entity("ProjetoEixo4_API.Models.LinkDto", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    b.Property<string>("Href")
-                        .HasColumnType("longtext");
-
-                    b.Property<int?>("ItemId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Metodo")
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("Rel")
-                        .HasColumnType("longtext");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("ItemId");
-
-                    b.ToTable("LinkDto");
-                });
-
             modelBuilder.Entity("ProjetoEixo4_API.Models.Lista", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<int>("ClienteId")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("DataDaLista")
@@ -118,43 +97,23 @@ namespace ProjetoEixo4_API.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Listas");
-                });
-
-            modelBuilder.Entity("ProjetoEixo4_API.Models.ListaClientes", b =>
-                {
-                    b.Property<int>("ListaId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("ClienteId")
-                        .HasColumnType("int");
-
-                    b.HasKey("ListaId", "ClienteId");
-
                     b.HasIndex("ClienteId");
 
-                    b.ToTable("ListaClientes");
+                    b.ToTable("Listas");
                 });
 
             modelBuilder.Entity("ProjetoEixo4_API.Models.Item", b =>
                 {
-                    b.HasOne("ProjetoEixo4_API.Models.Lista", "lista")
+                    b.HasOne("ProjetoEixo4_API.Models.Lista", "Lista")
                         .WithMany("Itens")
                         .HasForeignKey("ListaId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("lista");
+                    b.Navigation("Lista");
                 });
 
-            modelBuilder.Entity("ProjetoEixo4_API.Models.LinkDto", b =>
-                {
-                    b.HasOne("ProjetoEixo4_API.Models.Item", null)
-                        .WithMany("Links")
-                        .HasForeignKey("ItemId");
-                });
-
-            modelBuilder.Entity("ProjetoEixo4_API.Models.ListaClientes", b =>
+            modelBuilder.Entity("ProjetoEixo4_API.Models.Lista", b =>
                 {
                     b.HasOne("ProjetoEixo4_API.Models.Cliente", "Cliente")
                         .WithMany("Listas")
@@ -162,15 +121,7 @@ namespace ProjetoEixo4_API.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("ProjetoEixo4_API.Models.Lista", "Lista")
-                        .WithMany("Clientes")
-                        .HasForeignKey("ListaId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.Navigation("Cliente");
-
-                    b.Navigation("Lista");
                 });
 
             modelBuilder.Entity("ProjetoEixo4_API.Models.Cliente", b =>
@@ -178,15 +129,8 @@ namespace ProjetoEixo4_API.Migrations
                     b.Navigation("Listas");
                 });
 
-            modelBuilder.Entity("ProjetoEixo4_API.Models.Item", b =>
-                {
-                    b.Navigation("Links");
-                });
-
             modelBuilder.Entity("ProjetoEixo4_API.Models.Lista", b =>
                 {
-                    b.Navigation("Clientes");
-
                     b.Navigation("Itens");
                 });
 #pragma warning restore 612, 618

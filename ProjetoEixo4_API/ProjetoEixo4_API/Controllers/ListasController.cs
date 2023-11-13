@@ -6,7 +6,7 @@ using ProjetoEixo4_API.Models;
 
 namespace ProjetoEixo4_API.Controllers
 {
-    [Authorize]
+    //[Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class ListasController : ControllerBase
@@ -18,97 +18,119 @@ namespace ProjetoEixo4_API.Controllers
             _context = context;
         }
 
-        [HttpGet]
-        public async Task<ActionResult> GetAll()
+        [HttpPost]
+        public async Task<ActionResult> Create(ListaDto listaDto)
         {
-            var model = await _context.Listas
-                 .Include(t => t.Itens)
+            var lista = new Lista
+            {
+                NomeDaLista = listaDto.NomeDaLista,
+                Mercado = listaDto.Mercado,
+                DataDaLista = listaDto.DataDaLista.GetValueOrDefault(),
+                ClienteId = listaDto.ClienteId,
+                Itens = listaDto.Itens?.Select(dto => new Item { Id = dto.Id }).ToList()
+            };
+
+            _context.Listas.Add(lista);
+            await _context.SaveChangesAsync();
+
+            return Ok(lista);
+        }
+
+        [HttpGet("ListasCliente/{clienteId}")]
+        public async Task<ActionResult<IEnumerable<ListaCompleteDto>>> GetListasByClienteId(int clienteId)
+        {
+            var listas = await _context.Listas
+                .Where(l => l.ClienteId == clienteId)
+                .Select(l => new ListaCompleteDto
+                {
+                    Id = l.Id,
+                    NomeDaLista = l.NomeDaLista,
+                    Mercado = l.Mercado,
+                    DataDaLista = l.DataDaLista,
+                    Itens = l.Itens.Select(i => new ItemDto { Id = i.Id }).ToList(),
+                    ClienteId = l.ClienteId
+                })
                 .ToListAsync();
 
-            return Ok(model);
-        }
-        [HttpPost]
-        public async Task<ActionResult> Create(Lista model)
-        {
-            //if(model.ValorTotal <=0 || model.QuantidadeDeProdutos <= 0)
-            //{
-            //return BadRequest(new {message="Quantidade e Valor devem ser maiores do que zero!!"});
-            //}
+            if (listas == null || !listas.Any())
+            {
+                return NotFound();
+            }
 
-            _context.Listas.Add(model);
+            return Ok(listas);
+        }
+
+        [HttpPut("AtualizarLista/{id}")]
+        public async Task<IActionResult> Update(int id, ListaPutDto listaPutDto)
+        {
+            if (id != listaPutDto.Id)
+            {
+                return BadRequest("ID da URL não corresponde ao ID do corpo da requisição.");
+            }
+
+            var lista = await _context.Listas
+                .Include(l => l.Itens)
+                .FirstOrDefaultAsync(l => l.Id == id);
+
+            if (lista == null)
+            {
+                return NotFound();
+            }
+
+            lista.NomeDaLista = listaPutDto.NomeDaLista;
+            lista.Mercado = listaPutDto.Mercado;
+            lista.DataDaLista = listaPutDto.DataDaLista ?? lista.DataDaLista;
+
+            // Aqui você pode adicionar lógica para atualizar os itens se necessário
+            // Por exemplo, se você deseja substituir os itens existentes pelos novos
+            // lista.Itens = ... (sua lógica para atualizar os itens)
+
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!ListaExists(id))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+
+            return NoContent(); 
+        }
+
+        private bool ListaExists(int id)
+        {
+            return _context.Listas.Any(e => e.Id == id);
+        }
+
+        [HttpDelete("DeletarLista/{id}")]
+        public async Task<IActionResult> Delete(int id)
+        {
+            var lista = await _context.Listas
+                .Include(l => l.Itens)
+                .FirstOrDefaultAsync(l => l.Id == id);
+
+            if (lista == null)
+            {
+                return NotFound();
+            }
+
+            if (lista.Itens != null && lista.Itens.Any())
+            {
+                _context.Itens.RemoveRange(lista.Itens);
+            }
+
+            // Exclui a lista
+            _context.Listas.Remove(lista);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetById", new { id = model.Id }, model);
-
+            return NoContent(); 
         }
-
-        [HttpGet("{id}")]
-        public async Task<ActionResult> GetById(int id)
-        {
-            var model = await _context.Listas
-                //.Include(t => t.Clientes).ThenInclude(t=>t.Cliente)
-                .Include(t => t.Itens)
-                .FirstOrDefaultAsync(c => c.Id == id);
-
-            if (model == null) return NotFound();
-           //GerarLinks(model);
-            return Ok(model);
-
-        }
-        [HttpPut("{id}")]
-        public async Task<ActionResult> Update(int id, Lista model)
-        {
-            if (id != model.Id) return BadRequest();
-            var modeloDB = await _context.Listas.AsNoTracking().FirstOrDefaultAsync(c => c.Id == id);
-            if (modeloDB == null) return NotFound();
-
-
-
-            _context.Listas.Update(model);
-            await _context.SaveChangesAsync();
-            return NoContent();
-        }
-
-        [HttpDelete("{id}")]
-        public async Task<ActionResult> Delete(int id)
-        {
-            var model = await _context.Listas.FindAsync(id);
-
-            if (model == null) return NotFound();
-
-            _context.Listas.Remove(model);
-            await _context.SaveChangesAsync();
-
-            return NoContent();
-
-        }
-
-
-        /* [HttpPost("{id}/clientes")]
-         public async Task<ActionResult> AddCliente(int id,ListaClientes model )
-         {
-             if(id !=model.ListaId) return BadRequest();
-
-             _context.ListaClientes.Add(model);
-             await _context.SaveChangesAsync();
-
-             return CreatedAtAction("GetById", new { id = model.ListaId }, model);
-         }
-         [HttpDelete("{id}/clientes/{clienteId}")]
-         public async Task<ActionResult> DeleteCliente(int id, int clienteId )
-         {
-             var model = await _context.ListaClientes
-                 .Where(c => c.ListaId == id && c.ClienteId == clienteId)
-                 .FirstOrDefaultAsync();
-
-             if(model == null) return NotFound();
-
-             _context.ListaClientes.Remove(model);
-             await _context.SaveChangesAsync();
-
-             return NoContent();
-
-
-         }*/
     }
 }

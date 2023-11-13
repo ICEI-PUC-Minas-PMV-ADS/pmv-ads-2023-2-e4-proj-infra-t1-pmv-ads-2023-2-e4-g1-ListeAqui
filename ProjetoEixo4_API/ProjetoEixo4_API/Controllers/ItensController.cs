@@ -6,7 +6,7 @@ using ProjetoEixo4_API.Models;
 
 namespace ProjetoEixo4_API.Controllers
 {
-    [Authorize]
+    //[Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class ItensController : ControllerBase
@@ -17,13 +17,7 @@ namespace ProjetoEixo4_API.Controllers
         {
             _context = context;
         }
-
-        [HttpGet]
-        public async Task<ActionResult> GetAll()
-        {
-            var model = await _context.Itens.ToListAsync();
-            return Ok(model);
-        }
+      
         [HttpPost]
         public async Task<ActionResult> Create(Item model)
         {
@@ -39,48 +33,83 @@ namespace ProjetoEixo4_API.Controllers
 
         }
 
-        [HttpGet("{id}")]
-        public async Task<ActionResult> GetById(int id)
+        [HttpGet("ItensDaLista/{listaId}")]
+        public async Task<ActionResult<IEnumerable<Item>>> GetItensByListaId(int listaId)
         {
-            var model = await _context.Itens.FirstOrDefaultAsync(c => c.Id == id);
+            var itens = await _context.Itens
+                .Where(i => i.ListaId == listaId)
+                .Select(i => new Item
+                {
+                    Id = i.Id,
+                    Descricao = i.Descricao,
+                    Data = i.Data,
+                    Valor = i.Valor,
+                    Quantidade = i.Quantidade,
+                    ListaId = i.ListaId
+                })
+                .ToListAsync();
 
-            if (model == null) return NotFound();
-            GerarLinks(model);
-            return Ok(model);
+            if (itens == null || !itens.Any())
+            {
+                return NotFound();
+            }
 
+            return Ok(itens);
         }
-        [HttpPut("{id}")]
-        public async Task<ActionResult> Update(int id, Item model)
+
+        [HttpPut("AtualizarItems/{id}")]
+        public async Task<ActionResult> Update(int id, ItemPutDto itemPutDto)
         {
-            if (id != model.Id) return BadRequest();
-            var modeloDB = await _context.Itens.AsNoTracking().FirstOrDefaultAsync(c => c.Id == id);
-            if (modeloDB == null) return NotFound();
+            if (id != itemPutDto.Id)
+            {
+                return BadRequest("ID da URL não corresponde ao ID do corpo da requisição.");
+            }
 
+            var item = await _context.Itens.FindAsync(id);
+            if (item == null)
+            {
+                return NotFound();
+            }
 
+            item.Descricao = itemPutDto.Descricao;
+            item.Data = itemPutDto.Data;
+            item.Valor = itemPutDto.Valor;
+            item.Quantidade = itemPutDto.Quantidade;
 
-            _context.Itens.Update(model);
-            await _context.SaveChangesAsync();
-            return NoContent();
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!_context.Itens.Any(e => e.Id == id))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+
+            return NoContent(); // Retorna um status 204 (No Content) após a atualização bem-sucedida
         }
 
-        [HttpDelete("{id}")]
+        [HttpDelete("DeletarItems/{id}")]
         public async Task<ActionResult> Delete(int id)
         {
-            var model = await _context.Itens.FindAsync(id);
+            var item = await _context.Itens.FindAsync(id);
 
-            if (model == null) return NotFound();
+            if (item == null)
+            {
+                return NotFound();
+            }
 
-            _context.Itens.Remove(model);
+            _context.Itens.Remove(item);
             await _context.SaveChangesAsync();
 
             return NoContent();
+        }
 
-        }
-        private void GerarLinks(Item model)
-        {
-            model.Links.Add(new LinkDto(model.Id, Url.ActionLink(), rel: "self", metodo: "GET"));
-            model.Links.Add(new LinkDto(model.Id, Url.ActionLink(), rel: "update", metodo: "PUT"));
-            model.Links.Add(new LinkDto(model.Id, Url.ActionLink(), rel: "delete", metodo: "Delete"));
-        }
     }
 }

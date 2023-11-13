@@ -16,7 +16,7 @@ namespace ProjetoEixo4_API.Models
         public string Password { get; set; }
         [Column("Email")]
         public string Email { get; set; }
-        public ICollection<ListaClientes> Listas { get; set; }
+        public ICollection<Lista>? Listas { get; set; }
 
       
     }
