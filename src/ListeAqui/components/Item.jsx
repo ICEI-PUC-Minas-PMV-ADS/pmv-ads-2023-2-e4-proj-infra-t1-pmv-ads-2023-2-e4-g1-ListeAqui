@@ -1,20 +1,22 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import { Icon } from 'react-native-elements';
-import theme from '../components/DefaultTheme';
+import theme from './DefaultTheme';
 
-function Meta({ title, description, onEditPress, onCompletePress}) {
+function Item({ descricao, data, valor, quantidade, onEditPress, onCompletePress }) {
   return (
     <TouchableOpacity style={styles.container}>
       <View style={styles.textContainer}>
-        <Text style={styles.title}>{title}</Text>
-        <Text style={styles.description}>{description}</Text>
+        <Text style={styles.title}>{descricao}</Text>
+        <Text style={styles.description}>Data: {data}</Text>
+        <Text style={styles.description}>Valor: R$ {valor.toFixed(2)}</Text>
+        <Text style={styles.description}>Quantidade: {quantidade}</Text>
       </View>
       <View style={styles.iconContainer}>
         <Icon
           name="edit"
           type="font-awesome"
-          color={theme.colors.tercyary}
+          color={theme.colors.tertiary}
           onPress={onEditPress}
           containerStyle={{ marginRight: 10 }}
         />
@@ -33,8 +35,6 @@ const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
     width: '100%',
-    height: '100%',
-    flex: 1,
     alignItems: 'center',
     justifyContent: 'space-between',
     backgroundColor: '#9B72F5',
@@ -62,4 +62,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Meta;
+export default Item;

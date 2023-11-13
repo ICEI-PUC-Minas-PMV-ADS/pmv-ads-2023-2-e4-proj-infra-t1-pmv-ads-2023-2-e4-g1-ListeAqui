@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { StyleSheet, View, TouchableOpacity, Platform, Modal, Text } from 'react-native';
-import { auth } from '../DB/firebase';
+import { StyleSheet, View, TouchableOpacity, Modal, Text } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 
 const MenuGlobal = ({ navigation }) => {
@@ -8,7 +7,6 @@ const MenuGlobal = ({ navigation }) => {
 
   const handleLogout = async () => {
     try {
-      await auth.signOut();
       navigation.navigate('Login');
     } catch (error) {
       console.log('Error occurred while logging out:', error);
@@ -21,7 +19,7 @@ const MenuGlobal = ({ navigation }) => {
         <Icon name="tasks" size={25} color="white" onPress={() => navigation.navigate('Home')} />
       </TouchableOpacity>
       <TouchableOpacity style={styles.leftIcon}>
-        <Icon name="shopping-bag" size={25} color="white" onPress={() => navigation.navigate('CadastreObjetivo')} />
+        <Icon name="shopping-bag" size={25} color="white" onPress={() => navigation.navigate('CadastroLista')} />
       </TouchableOpacity>
       <TouchableOpacity style={styles.rightIcon} onPress={() => setLogoutModalVisible(true)}>
         <Icon name="sign-in-alt" size={25} color="white" />

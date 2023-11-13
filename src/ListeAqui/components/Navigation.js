@@ -8,7 +8,7 @@ import CadastrePage from '../pages/CadastrePage';
 import TopBar from '../components/TopBar';
 import MenuGlobal from '../components/MenuGlobal';
 import ProfilePage from '../pages/ProfilePage';
-import CadastreDreamPage from '../pages/CadastreDreamPage';
+import CadastroLista from '../pages/CadastroLista';
 // import DreamPage from '.src/pages/DreamPage';
 
 
@@ -24,7 +24,7 @@ function Navigation() {
       <Stack.Screen name="Profile" component={ProfilePage} />
       <Stack.Screen name="TopBar" component={TopBar} />
       <Stack.Screen name="MenuGlobal" component={MenuGlobal} />
-      <Stack.Screen name="CadastreObjetivo" component={CadastreDreamPage} />
+      <Stack.Screen name="CadastroLista" component={CadastroLista} />
       <Stack.Screen name="Home" component={HomePage} />
       
     </Stack.Navigator>
