@@ -1,38 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
 import { Avatar } from 'react-native-paper';
 import Icon from 'react-native-vector-icons/FontAwesome5';
-import { db, auth } from '../DB/firebase';
-import { onSnapshot, collection, doc, getDoc } from 'firebase/firestore';
+import { useUser } from '../components/UserContext';
 
 const TopBar = ({ navigation }) => {
-  const [userName, setUserName] = useState('');
-
-  useEffect(() => {
-    const fetchUserName = async () => {
-      const user = auth.currentUser;
-      if (user) {
-        const { uid } = user;
-        const userDocRef = doc(db, 'usuarios', uid);
-        const userDocSnap = await getDoc(userDocRef);
-        if (userDocSnap.exists()) {
-          const userData = userDocSnap.data();
-          const { nome, sobrenome } = userData;
-          const fullName = `${nome} ${sobrenome}`;
-          setUserName(fullName);
-        } 
-        else {
-          setUserName('Cadastrando...');
-        }
-      }
-    };
-
-    const unsubscribe = onSnapshot(collection(db, 'usuarios'), () => {
-      fetchUserName();
-    });
-
-    return () => unsubscribe();
-  }, []);
+  const { user } = useUser();
 
   return (
     <View style={styles.containerTopBar}>
@@ -44,7 +17,7 @@ const TopBar = ({ navigation }) => {
         />
       </View>
       <View style={styles.positionUserName}>
-        <Text style={styles.username}>Olá: {userName}</Text>
+        <Text style={styles.username}>Olá: {user ? user.nome : 'Visitante'}</Text>
       </View>
       <View style={styles.positionIcon}>
         <TouchableOpacity style={styles.leftIcon}>

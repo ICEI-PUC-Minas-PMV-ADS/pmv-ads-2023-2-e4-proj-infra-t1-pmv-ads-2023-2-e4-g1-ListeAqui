@@ -1,89 +1,47 @@
 import React, { useState, useRef } from 'react';
 import { View, StyleSheet, ScrollView, TouchableOpacity, Text, ActivityIndicator } from 'react-native';
 import { TextInput, Button, Headline } from 'react-native-paper';
+import axios from 'axios'; 
 import Logo from '../components/Logo';
 import theme from '../components/DefaultTheme';
 import Toast, { DURATION } from 'react-native-easy-toast';
-import { signInWithEmailAndPassword, sendPasswordResetEmail } from 'firebase/auth';
-import { auth } from '../DB/firebase';
+import { useUser } from '../components/UserContext';
 
 const Login = ({ navigation }) => {
   const toastRef = useRef();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [resetEmail, setResetEmail] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+  const { setUser } = useUser();
+  
 
-  const showToast = () => {
-    toastRef.current.show('This is a toast message', DURATION.LENGTH_LONG);
+  const showToast = (message) => {
+    toastRef.current.show(message, DURATION.LENGTH_LONG);
   };
 
-const handleForgotPassword = async () => {
-  try {
-    if (!password && (resetEmail || email)) {
-      const emailToReset = resetEmail || email;
-      await sendPasswordResetEmail(auth, emailToReset);
-      toastRef.current.show('E-mail de redefinição de senha enviado!', DURATION.LENGTH_LONG);
-    } else {
-      toastRef.current.show('Preencha apenas o e-mail!', DURATION.LENGTH_LONG);
-    }
-  } catch (error) {
-    toastRef.current.show('Erro ao enviar e-mail de redefinição de senha', DURATION.LENGTH_LONG);
-  }
-};
-
-
-  // const handleEmailLogin = async () => {
-  //   try {
-  //     setIsLoading(true); 
-
-  //     await signInWithEmailAndPassword(auth, email, password);
-
-  //     setTimeout(() => {
-  //       setIsLoading(false); 
-  //       navigation.navigate('Home');
-  //     }, 1800);
-
-  //   } catch (error) {
-  //     setIsLoading(false); 
-  //     console.log('Erro ao fazer login:', error);
-  //     toastRef.current.show('Erro ao fazer login', DURATION.LENGTH_LONG);
-  //   }
-  // };
-
   const handleEmailLogin = async () => {
+
     try {
       setIsLoading(true);
-  
-      await signInWithEmailAndPassword(auth, email, password);
-  
-      // // Após o login bem-sucedido no Firebase
-      // const user = auth.currentUser;
-      // const token = await user.getIdToken();
-  
-      // // Enviar o token para a sua API C#
-      // const apiResponse = await fetch('https://sua-api-csharp.com/sua-rota', {
-      //   method: 'POST',
-      //   headers: {
-      //     'Content-Type': 'application/json',
-      //     'Authorization': `Bearer ${token}`,
-      //   },
-      //   // Você pode adicionar quaisquer dados adicionais que a API C# requer
-      //   body: JSON.stringify({ userId: user.uid }),
-      // });
-  
-      // Verifique a resposta da API C# e faça o tratamento necessário
-  
+      
+      const response = await axios.post('http://listeaqui-001-site1.btempurl.com/api/clientes/authenticate', {
+        email: email,
+        password: password
+      });
+
+        if (response.status === 200) {
+        setUser(response.data);
+        navigation.navigate('Home');
+      }
+
       setIsLoading(false);
-      navigation.navigate('Home');
     } catch (error) {
       setIsLoading(false);
       console.log('Erro ao fazer login:', error);
-      toastRef.current.show('Erro ao fazer login', DURATION.LENGTH_LONG);
+      showToast('Erro ao fazer login');
     }
   };
   
-
   return (
    
     <ScrollView keyboardShouldPersistTaps="handled">
@@ -104,8 +62,8 @@ const handleForgotPassword = async () => {
           <TextInput
             mode="outlined"
             label="Email"
-            value={resetEmail ? resetEmail : email}
-            onChangeText={resetEmail ? setResetEmail : setEmail}
+            value={email}
+            onChangeText={setEmail}
             theme={theme}
             style={styles.input}
           />
@@ -151,7 +109,7 @@ const handleForgotPassword = async () => {
             </Button>
           </View>
           <View style={styles.btnForgotPassword}>
-            <TouchableOpacity onPress={handleForgotPassword}>
+            <TouchableOpacity onPress={'null'}>
               <Text style={styles.forgotPasswordText}>Esqueci minha senha</Text>
             </TouchableOpacity>
           </View>
