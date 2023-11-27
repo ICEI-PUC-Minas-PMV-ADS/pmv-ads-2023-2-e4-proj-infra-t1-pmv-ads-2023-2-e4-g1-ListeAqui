@@ -15,15 +15,17 @@ const MenuGlobal = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
-      <TouchableOpacity style={styles.leftIcon}>
-        <Icon name="tasks" size={25} color="white" onPress={() => navigation.navigate('Home')} />
-      </TouchableOpacity>
-      <TouchableOpacity style={styles.leftIcon}>
-        <Icon name="shopping-bag" size={25} color="white" onPress={() => navigation.navigate('CadastroLista')} />
-      </TouchableOpacity>
-      <TouchableOpacity style={styles.rightIcon} onPress={() => setLogoutModalVisible(true)}>
-        <Icon name="sign-in-alt" size={25} color="white" />
-      </TouchableOpacity>
+      <View style={styles.iconsContainer}>
+        <TouchableOpacity style={styles.iconButton}>
+          <Icon name="shopping-bag" size={25} color="white" onPress={() => navigation.navigate('Home')} />
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.iconButton}>
+          <Icon name="shopping-cart" size={25} color="white" onPress={() => navigation.navigate('CadastroLista')} />
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.iconButton} onPress={() => setLogoutModalVisible(true)}>
+          <Icon name="sign-in-alt" size={25} color="white" />
+        </TouchableOpacity>
+      </View>
       <Modal
         animationType="fade"
         transparent={true}
@@ -54,17 +56,17 @@ const styles = StyleSheet.create({
     width: '100%',
     backgroundColor: '#6CA19E',
     flexDirection: 'row',
-    justifyContent: 'space-between',
     alignItems: 'center',
     paddingHorizontal: 20,
     position: 'absolute',
     bottom: 0,
   },
-  leftIcon: {
-    marginRight: 20,
+  iconsContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
   },
-  rightIcon: {
-    marginLeft: 20,
+  iconButton: {
+    marginRight: 20,
   },
   modalContainer: {
     flex: 1,

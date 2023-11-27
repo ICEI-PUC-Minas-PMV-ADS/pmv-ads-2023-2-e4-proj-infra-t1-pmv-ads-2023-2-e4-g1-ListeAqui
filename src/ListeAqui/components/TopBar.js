@@ -65,11 +65,9 @@ const styles = StyleSheet.create({
     marginLeft: 30,
   },
   username: {
-    fontFamily: 'roboto',
-    fontSize: 16,
+    fontSize: 18,
     fontWeight: 'bold',
     color: '#ffff',
-    fontFamily: 'Roboto',
   },
 });
 

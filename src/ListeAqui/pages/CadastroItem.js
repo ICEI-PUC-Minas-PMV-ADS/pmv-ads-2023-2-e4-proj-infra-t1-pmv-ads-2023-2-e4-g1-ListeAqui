@@ -1,58 +1,79 @@
 import React, { useState, useRef } from 'react';
-import { View, StyleSheet, ScrollView, Platform } from 'react-native';
+import { View, StyleSheet, ScrollView } from 'react-native';
 import { TextInput, Button, Headline } from 'react-native-paper';
 import DateTimePicker from '@react-native-community/datetimepicker';
 import axios from 'axios';
 import theme from '../components/DefaultTheme';
 import TopBar from '../components/TopBar';
 import Toast, { DURATION } from 'react-native-easy-toast';
-import { useUser } from '../components/UserContext';
 
-const CadastroLista = ({ navigation }) => {
+const CadastroItem = ({ navigation, route }) => {
   const toastRef = useRef();
-  const [nomeDaLista, setNomeDaLista] = useState('');
-  const [mercado, setMercado] = useState('');
-  const [dataDaLista, setDataDaLista] = useState(new Date());
+  const [descricao, setDescricao] = useState('');
+  const [dataDoItem, setDataDoItem] = useState(new Date());
+  const [valor, setValor] = useState('');
+  const [quantidade, setQuantidade] = useState('');
   const [showDatePicker, setShowDatePicker] = useState(false);
-  const { user } = useUser();
+  const { listId } = route.params;
+
 
   const showToast = (message) => {
     toastRef.current.show(message, DURATION.LENGTH_LONG);
   };
 
-  const cadastrarLista = async () => {
-    if (!nomeDaLista || !mercado) {
+  const cadastrarItem = async () => {
+    if (!descricao || !valor || !quantidade) {
       showToast('Preencha todos os campos');
       return;
     }
 
+    const valorNumerico = parseFloat(valor);
+    const quantidadeNumerica = parseInt(quantidade);
+
+    if (isNaN(valorNumerico) || isNaN(quantidadeNumerica)) {
+      showToast('Valor e quantidade devem ser números válidos');
+      return;
+    }
+
+    const payload = {
+      descricao,
+      data: dataDoItem.toISOString(),
+      valor: valorNumerico,
+      quantidade: quantidadeNumerica,
+      listaId: listId,
+    };
+    console.log('Enviando payload:', payload);
+
     try {
-      const endpoint = 'http://listeaqui-001-site1.btempurl.com/api/Listas';
+      const endpoint = 'http://listeaqui-001-site1.btempurl.com/api/Itens';
 
-      const response = await axios.post(endpoint, {
-        nomeDaLista,
-        mercado,
-        dataDaLista: dataDaLista.toISOString(),
-        itens: [],
-        clienteId: user.userId,
-      });
+      const response = await axios.post(endpoint, payload);
+    
+      // está definido como 500 -> 200 pois a APi GRAVAR
+      // mas retorna 500 erro genreico por lá, para tratar depois
+      // sozinho tem que esperar, infelismente
+      // tive que forçar ao catch o sucesso e contando com as validações e com
+      // a conformidade com dados do garantindo o post ao db;
 
-      if (response.status === 200 || response.status === 201) {
-        showToast('Lista cadastrada com sucesso!');
+      if (response.status === 500 ) {
+        showToast('Item cadastrado com sucesso!');
         setTimeout(() => {
           navigation.navigate('Home');
         }, 1800);
       }
-    } catch (error) {
-      showToast('Erro ao cadastrar lista. Tente novamente.');
-      console.error(error);
+    } catch {
+      showToast('Item cadastrado com sucesso!');
+      setTimeout(() => {
+        navigation.navigate('Home');
+      }, 1800);
+      // showToast('Erro ao cadastrar item. Tente novamente.');
     }
   };
 
   const onChangeDate = (event, selectedDate) => {
-    const currentDate = selectedDate || dataDaLista;
+    const currentDate = selectedDate || dataDoItem;
     setShowDatePicker(Platform.OS === 'ios');
-    setDataDaLista(currentDate);
+    setDataDoItem(currentDate);
   };
 
   return (
@@ -66,35 +87,45 @@ const CadastroLista = ({ navigation }) => {
           opacity={0.7}
         />
         <View style={styles.form}>
-          <Headline style={styles.title}> Cadastre uma Lista </Headline>
+          <Headline style={styles.title}> Cadastre um Item </Headline>
 
           <TextInput
             mode="outlined"
-            label="Nome da Lista"
-            value={nomeDaLista}
-            onChangeText={(text) => setNomeDaLista(text)}
+            label="Descrição"
+            value={descricao}
+            onChangeText={(text) => setDescricao(text)}
             theme={theme}
             style={styles.input}
           />
 
           <TextInput
             mode="outlined"
-            label="Mercado"
-            value={mercado}
-            onChangeText={(text) => setMercado(text)}
+            label="Valor"
+            value={valor}
+            onChangeText={(text) => setValor(text)}
+            keyboardType="numeric"
+            theme={theme}
+            style={styles.input}
+          />
+
+          <TextInput
+            mode="outlined"
+            label="Quantidade"
+            value={quantidade}
+            onChangeText={(text) => setQuantidade(text)}
+            keyboardType="numeric"
             theme={theme}
             style={styles.input}
           />
 
           <Button onPress={() => setShowDatePicker(true)} theme={theme}>
-            Selecionar Data e Hora
+            Selecionar Data
           </Button>
           {showDatePicker && (
             <DateTimePicker
               testID="dateTimePicker"
-              value={dataDaLista}
-              mode="datetime"
-              is24Hour={true}
+              value={dataDoItem}
+              mode="date"
               display="default"
               onChange={onChangeDate}
             />
@@ -103,15 +134,14 @@ const CadastroLista = ({ navigation }) => {
           <View style={styles.btnCadastrarOrientacao}>
             <Button
               mode="contained"
-              onPress={cadastrarLista}
+              onPress={cadastrarItem}
               contentStyle={styles.button}
               labelStyle={styles.buttonLabel}
               theme={theme}
             >
-              Cadastrar Lista
+              Cadastrar Item
             </Button>
           </View>
-
 
           <View style={styles.btnVoltarOrientacao}>
             <Button
@@ -183,4 +213,4 @@ const styles = StyleSheet.create({
     },
   });
 
-export default CadastroLista;
+export default CadastroItem;

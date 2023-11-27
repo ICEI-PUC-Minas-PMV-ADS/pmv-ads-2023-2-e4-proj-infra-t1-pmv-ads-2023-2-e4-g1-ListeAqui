@@ -9,12 +9,11 @@ import { useUser } from '../components/UserContext';
 
 const Login = ({ navigation }) => {
   const toastRef = useRef();
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState('gabrielnakata@gmail.com');
+  const [password, setPassword] = useState('acesso');
   const [isLoading, setIsLoading] = useState(false);
   const { setUser } = useUser();
   
-
   const showToast = (message) => {
     toastRef.current.show(message, DURATION.LENGTH_LONG);
   };
@@ -109,7 +108,7 @@ const Login = ({ navigation }) => {
             </Button>
           </View>
           <View style={styles.btnForgotPassword}>
-            <TouchableOpacity onPress={'null'}>
+            <TouchableOpacity onPress={'Home'}>
               <Text style={styles.forgotPasswordText}>Esqueci minha senha</Text>
             </TouchableOpacity>
           </View>

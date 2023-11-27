@@ -9,8 +9,8 @@ import TopBar from '../components/TopBar';
 import MenuGlobal from '../components/MenuGlobal';
 import ProfilePage from '../pages/ProfilePage';
 import CadastroLista from '../pages/CadastroLista';
-// import DreamPage from '.src/pages/DreamPage';
-
+import CadastroItem from '../pages/CadastroItem';
+import ItemsListaPage from '../pages/ItemsListaPage';
 
 const Stack = createStackNavigator();
 
@@ -25,7 +25,9 @@ function Navigation() {
       <Stack.Screen name="TopBar" component={TopBar} />
       <Stack.Screen name="MenuGlobal" component={MenuGlobal} />
       <Stack.Screen name="CadastroLista" component={CadastroLista} />
+      <Stack.Screen name="CadastroItem" component={CadastroItem} />
       <Stack.Screen name="Home" component={HomePage} />
+      <Stack.Screen name="ItemsLista" component={ItemsListaPage}/>
       
     </Stack.Navigator>
   );
