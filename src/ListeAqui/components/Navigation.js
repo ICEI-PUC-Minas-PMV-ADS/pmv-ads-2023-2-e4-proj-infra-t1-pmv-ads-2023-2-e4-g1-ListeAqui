@@ -10,7 +10,8 @@ import MenuGlobal from '../components/MenuGlobal';
 import ProfilePage from '../pages/ProfilePage';
 import CadastroLista from '../pages/CadastroLista';
 import CadastroItem from '../pages/CadastroItem';
-import ItemsListaPage from '../pages/ItemsListaPage';
+import ItemsLista from '../pages/ItemsListaPage';
+import EditarItem from '../pages/EditarItem';
 
 const Stack = createStackNavigator();
 
@@ -27,7 +28,8 @@ function Navigation() {
       <Stack.Screen name="CadastroLista" component={CadastroLista} />
       <Stack.Screen name="CadastroItem" component={CadastroItem} />
       <Stack.Screen name="Home" component={HomePage} />
-      <Stack.Screen name="ItemsLista" component={ItemsListaPage}/>
+      <Stack.Screen name="ItemsLista" component={ItemsLista}/>
+      <Stack.Screen name="EditarItem" component={EditarItem}/>
       
     </Stack.Navigator>
   );

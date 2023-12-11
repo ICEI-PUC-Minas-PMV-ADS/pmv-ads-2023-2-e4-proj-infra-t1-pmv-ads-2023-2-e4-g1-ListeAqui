@@ -25,8 +25,8 @@ const ItemsLista = ({ navigation, route }) => {
         showToast('Carregando Items da Lista...');
       }
     } catch (error) {
-      console.error('Erro ao buscar items da lista:', error);
-      showToast('Erro ao carregar items da lista...');
+      console.error('Erro ao buscar items da lista:');
+      showToast('Não existe items da lista...');
     }
   };
 
@@ -38,12 +38,12 @@ const ItemsLista = ({ navigation, route }) => {
 
   const renderItem = ({ item }) => (
     <Item
-      itemId={item.id}
+      id={item.id}
       descricao={item.descricao}
       data={item.data}
       valor={item.valor}
       quantidade={item.quantidade}
-      listaId={item.listId}
+      listaId={item.listaId}
       navigation={navigation}
     />
   );
@@ -52,7 +52,7 @@ const ItemsLista = ({ navigation, route }) => {
     <View style={styles.container}>
       <TopBar navigation={navigation} />
       <View style={styles.containerContent}>
-        <Text style={styles.subtitle}>Items da Listas${listId}</Text>
+        <Text style={styles.subtitle}>Items da Listas ${listId}</Text>
         {itemsLista.length > 0 && (
           <FlatList
             style={styles.tasklist}

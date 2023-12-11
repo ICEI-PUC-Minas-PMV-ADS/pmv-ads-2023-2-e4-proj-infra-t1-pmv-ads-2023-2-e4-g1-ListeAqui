@@ -9,8 +9,8 @@ import { useUser } from '../components/UserContext';
 
 const Login = ({ navigation }) => {
   const toastRef = useRef();
-  const [email, setEmail] = useState('gabrielnakata@gmail.com');
-  const [password, setPassword] = useState('acesso');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const { setUser } = useUser();
   

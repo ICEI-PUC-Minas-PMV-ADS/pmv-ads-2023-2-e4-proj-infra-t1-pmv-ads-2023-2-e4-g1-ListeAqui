@@ -2,6 +2,7 @@ import React, { useState }  from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import { Icon } from 'react-native-elements';
 import theme from './DefaultTheme';
+import axios from 'axios';
 
 function Item({ id, descricao, data, valor, quantidade, listaId, onEditPress, onCompletePress, navigation }) {
   const [showDetails, setShowDetails] = useState(false);
@@ -10,13 +11,27 @@ function Item({ id, descricao, data, valor, quantidade, listaId, onEditPress, on
     setShowDetails(!showDetails);
   };
 
-  const CadastroItem = () => {
+  const EditarItem = () => {
     setTimeout(() => {
       // Passando listId como parâmetro para a tela CadastroLista
-       navigation.navigate('CadastroItem', { listId: listId });
+       navigation.navigate('EditarItem', { id: id }, { listaId: listaId });
       // navigation.navigate('CadastroLista');
     }, 800);
   };
+
+  const DeleteItem = async () => {
+    try {
+        const response = await axios.delete(`http://listeaqui-001-site1.btempurl.com/api/Itens/DeletarItems/${id}`);
+    
+        if (response.status === 204) {
+            showToast('Item deletado com sucesso!');
+            setTimeout(() => {
+                navigation.navigate('Home');
+            }, 1800);
+        }
+    } catch (error) {
+    }
+}
 
   return (
     <View style={styles.container}>
@@ -27,20 +42,20 @@ function Item({ id, descricao, data, valor, quantidade, listaId, onEditPress, on
             <Text style={styles.title}>{descricao}</Text>
               <TouchableOpacity style={styles.iconButton}>
                 <Icon
-                  name="plus"
+                  name="trash"
                   type="font-awesome"
                   color="white"
-                  onPress={CadastroItem}
+                  onPress={DeleteItem}
                 />
               </TouchableOpacity>
             </View>
             {showDetails && (
               <View style={styles.detailsContainer}>
-                <Text style={styles.title}>{listaId}</Text>
                 <Text style={styles.description}>Id: {id}</Text>
                 <Text style={styles.description}>Data: {data}</Text>
                 <Text style={styles.description}>Valor: R$ {valor.toFixed(2)}</Text>
                 <Text style={styles.description}>Quantidade: {quantidade}</Text>
+                <Text style={styles.description}>ListaId: {listaId}</Text>
               </View>
             )}
           </View>
@@ -50,7 +65,7 @@ function Item({ id, descricao, data, valor, quantidade, listaId, onEditPress, on
               type="font-awesome"
               size={25}
               color="white"
-              onPress={onCompletePress}/>
+              onPress={EditarItem}/>
             </TouchableOpacity>
           </View>
       </TouchableOpacity>
