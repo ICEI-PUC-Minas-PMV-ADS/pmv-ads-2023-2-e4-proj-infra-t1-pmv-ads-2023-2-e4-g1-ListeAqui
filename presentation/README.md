@@ -1,6 +1,5 @@
 # Apresentação da Solução
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/QGhi1tb3Pac" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[![POC - Etapa5](https://img.youtube.com/vi/QGhi1tb3Pac/maxresdefault.jpg)](https://www.youtube.com/watch?v=QGhi1tb3Pac)
 
 
-Faça uma apresentação de um resumo de todos o processo de desenvolvimento e no final apresente a solução desenvolvida, usando um pequeno vídeo.
