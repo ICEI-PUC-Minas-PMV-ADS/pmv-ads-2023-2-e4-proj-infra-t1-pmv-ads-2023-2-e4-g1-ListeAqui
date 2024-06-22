@@ -1,0 +1,26 @@
+message: Please cite this software using these metadata.
+title: ListeAqui
+authors:
+  - family-names: Carolina Silva Mendes
+    given-names: Ana 
+  - family-names: Nakhata Lopes Ruas Nhimi
+    given-names: Gabriel 
+  - family-names: Grimaldi Santa Anna
+    given-names: Jéssica 
+  - family-names: Paulo Faria do Nascimento
+    given-names: João 
+  - family-names: Alvarenga Rodrigues
+    given-names: Rafael 
+  - family-names: Cristina De Oliveira Teixeira
+    given-names: Silvia 
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Augusto Lara Soares
+    given-names: Felipe
+keywords:
+  - Compras
+  - Organização
+  - Mercado
+repository-code: https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t1-pmv-ads-2023-2-e4-g1-ListeAqui
+version: 1.0.0
+date-released: 2023-12-10
